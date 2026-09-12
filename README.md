@@ -2,10 +2,10 @@
 
 Static pages. No framework, no build step, no dependencies.
 
-    index.html        home page, visual overview, latest articles and the desktop tool
+    index.html        the four questions, latest articles, the tool, what it will not do
+    about.html        why the site exists and what it tries to get right
+    contact.html      one address, what is worth writing about, what cannot be answered
     compliance.html   12 chart sections + 3 calculators — late fee and interest since
-    about.html        why GST Pragyan exists, design principles and who it is for
-    contact.html      contact details, corrections and feedback
                       01.07.2017, notice/order limitation dates, and the rate structure
     articles.html     the article index, built from articles.json
     articles/         one HTML file per article, plus _TEMPLATE.html
@@ -53,7 +53,8 @@ Two things worth knowing:
 
 ## Editing
 
-- **Email** — search for `pragyan.gst@gmail.com` in all three pages.
+- **Email** — search for `pragyan.gst@gmail.com`; it appears on several pages.
+- **Navigation** — the `<nav>` block is the same on every page. Change one, change all.
 - **Download link** — `index.html`, the section with `id="download"`. Replace the two
   buttons with a real link when the app is published.
 - **Colours** — the `:root` block at the top of `style.css`.

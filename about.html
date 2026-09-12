@@ -1,99 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About Us | GST Pragyan</title>
-<meta name="description" content="Learn why GST Pragyan exists, who it is built for, and how the GST reference and desktop tool are designed.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — why GST Pragyan exists | GST Pragyan</title>
+<meta name="description" content="An independent GST reference and desktop tool, made by someone who works on return scrutiny. What it tries to get right, and what it is not.">
+<meta property="og:title" content="About — why GST Pragyan exists | GST Pragyan">
+<meta property="og:description" content="Free GST charts and calculators, and a desktop tool that reconciles the returns and prepares an ASMT-10 reference.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/og.jpg">
 <meta name="theme-color" content="#0B2440">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"><link rel="icon" type="image/png" href="assets/mark-64.png">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="assets/mark-64.png">
+<link rel="apple-touch-icon" href="assets/mark.png">
 </head>
-<body><a class="skip" href="#main">Skip to content</a>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="GST Pragyan home">
+    <a class="brand" href="index.html">
       <img src="assets/wordmark.png" alt="GST Pragyan" width="215" height="27" class="wm">
     </a>
-    <nav aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a href="compliance.html">GST Reference</a>
+    <nav>
+      <a href="compliance.html">Charts</a>
+      <a href="compliance.html#rates">Rates</a>
+      <a href="compliance.html#calc">Calculators</a>
       <a href="articles.html">Articles</a>
-      <a href="about.html" aria-current="page">About Us</a>
-      <a href="contact.html">Contact Us</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <a class="nav-tool" href="index.html#tool">The desktop tool <span>→</span></a>
   </div>
 </header>
+
 <main id="main">
-<section class="hero page-hero"><div class="wrap page-hero-inner">
-  <span class="eyebrow">About GST Pragyan</span>
-  <h1>Built for the person who has to <em>actually work with GST.</em></h1>
-  <p class="lede">GST Pragyan started with a simple idea: GST information should help you answer a question, not make you search through ten pages before you can start.</p>
-</div></section>
-<section><div class="wrap narrow">
-  <div class="section-head"><span class="chip chip-teal">Why we built it</span><h2 style="margin-top:14px">Less hunting. More understanding.</h2>
-  <p>GST work often comes down to a handful of practical questions: what applies, from which date, how much, and whether something is still within time. Pragyan brings those questions into one calm workspace.</p></div>
-  <div class="about-story">
-    <div class="story-step"><span>01</span><div><h3>Start with the question</h3><p>Need a due date? A late-fee calculation? A limitation date? A historical rate? Go directly to the relevant working page instead of navigating a maze.</p></div></div>
-    <div class="story-step"><span>02</span><div><h3>See the rule behind the number</h3><p>Figures are presented with their statutory basis and the relevant period. The aim is to make the reasoning visible, not just display a result.</p></div></div>
-    <div class="story-step"><span>03</span><div><h3>Use the result as working material</h3><p>The reference pages and calculators are aids to analysis. They do not replace checking the facts, the applicable law or the notifications in force for the period.</p></div></div>
+<div class="hero">
+  <div class="wrap narrow">
+    <span class="eyebrow">About</span>
+    <h1>Why this exists</h1>
+    <p class="lede">It started because I kept looking up the same things, getting them
+    slightly wrong, and rebuilding the same spreadsheet.</p>
   </div>
-</div></section>
-<section class="paper"><div class="wrap">
-  <div class="section-head center"><span class="chip chip-navy">Made for real work</span><h2 style="margin-top:14px">One place, different users.</h2>
-  <p>Pragyan is designed to be useful whether you are checking your own compliance, preparing a professional opinion, reviewing a case or learning how the GST framework fits together.</p></div>
-  <div class="grid g4 about-audience">
-    <div class="card"><div class="ico i-teal">₹</div><h3>Businesses</h3><p>Check dates, calculations and common compliance questions without unnecessary complexity.</p></div>
-    <div class="card"><div class="ico i-navy">⌕</div><h3>Professionals</h3><p>Trace a figure to its period and provision while working through a client's issue.</p></div>
-    <div class="card"><div class="ico i-orange">⚖</div><h3>Officers</h3><p>Use structured references and the desktop reconciliation workflow as working aids during scrutiny.</p></div>
-    <div class="card"><div class="ico i-green">↗</div><h3>Learners</h3><p>Understand the timeline and logic behind GST provisions instead of memorising isolated numbers.</p></div>
+</div>
+
+<section>
+  <div class="wrap narrow prose">
+    <p>I work on GST — return scrutiny, enforcement and adjudication. The questions that
+    come up are not complicated ones. What was the late fee for a period in 2019? Is a
+    notice for FY 2019-20 still within time? Which notification changed that cap? They are
+    simple questions with answers scattered across eight years of notifications, and
+    getting one of them slightly wrong means a figure in a notice that does not hold.</p>
+
+    <p>So I started writing the answers down properly, with the provision beside each one.
+    That became the charts. The calculators came next, because working out a late fee by
+    hand across three rate changes is exactly the sort of thing a person gets wrong at
+    five in the evening. Then the desktop tool, because reconciling five years of returns
+    in a spreadsheet is worse.</p>
+
+    <h2>What I try to get right</h2>
+
+    <p><strong>Every figure names its source.</strong> A number without the notification
+    behind it cannot be used in a notice or a reply, so there is no point publishing one.
+    Where the position is unsettled — a notification under challenge, a date that rests on
+    an extension — the page says so rather than presenting it as fixed.</p>
+
+    <p><strong>Where something cannot be established, it says so.</strong> That applies to
+    the tool as much as the charts. A screen that reports nothing because the data was
+    missing is not the same as one that examined the data and found nothing, and conflating
+    the two is how a clean result gets read into a defective file.</p>
+
+    <p><strong>Mistakes get corrected in public.</strong> There have been several. A late
+    fee cap that was double what it should have been, a rate that was silently misread
+    because a file name matched too loosely, an evidence total that disagreed with the
+    demand it was supporting by a rupee. Each was found by someone checking, and each is
+    written up in the release notes rather than quietly patched.</p>
+
+    <h2>What this is not</h2>
+
+    <p>It is not advice, and it is not official. It is an independent working aid, made in
+    my own time, and it is not published by or connected with any government body. It has
+    no account system, collects nothing about you, and asks for no money.</p>
+
+    <p>If you use it and something is wrong — a figure, a date, a citation, a sentence that
+    reads badly — I would rather hear it than not.
+    <a href="contact.html">Get in touch</a>.</p>
   </div>
-</div></section>
-<section><div class="wrap"><div class="grid g2 about-principles">
-  <div class="card principle"><span class="principle-num">01</span><h3>Clarity over clutter</h3><p>Pages are organised around tasks. Important information gets room; secondary detail stays available without taking over the screen.</p></div>
-  <div class="card principle"><span class="principle-num">02</span><h3>History matters</h3><p>A number that is correct today may be wrong for an older tax period. Pragyan therefore treats dates and changes as first-class information.</p></div>
-  <div class="card principle"><span class="principle-num">03</span><h3>Show the limits</h3><p>Where a result needs verification or depends on an assumption, it should say so. A useful tool should make uncertainty visible.</p></div>
-  <div class="card principle"><span class="principle-num">04</span><h3>Privacy by design</h3><p>The desktop workflow is designed around local processing. The data you work with should remain under your control.</p></div>
-</div></div></section>
-<section class="paper"><div class="wrap"><div class="about-note">
-  <div><span class="chip chip-orange">A practical boundary</span><h2 style="margin-top:14px">Pragyan is a working aid, not an authority.</h2></div>
-  <p>Use it to organise thinking, perform calculations and locate the relevant provision. Before relying on an answer in a live matter, verify the facts and the law applicable to that specific period.</p>
-  <a class="btn btn-primary" href="compliance.html">Explore the GST Reference →</a>
-</div></div></section>
-</main><footer class="site">
+</section>
+</main>
+
+<footer class="site">
   <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand">
+    <div class="cols">
+      <div>
         <a class="brand" href="index.html">
           <img src="assets/wordmark-light.png" alt="GST Pragyan" width="210" height="26" class="wm">
         </a>
-        <p>A practical GST workspace for understanding returns, dates, calculations and compliance questions — without the clutter.</p>
+        <p style="margin-top:14px;max-width:44ch">
+          A free GST reference and a desktop tool for reading returns — for taxpayers,
+          professionals, officers and students alike.
+        </p>
       </div>
       <div>
-        <h4>GST Reference</h4>
+        <h4>Free reference</h4>
         <ul>
           <li><a href="compliance.html#calc">Calculators</a></li>
           <li><a href="compliance.html#duedates">Due dates</a></li>
-          <li><a href="compliance.html#rates">GST rates</a></li>
-          <li><a href="compliance.html#history">Late fee &amp; interest</a></li>
+          <li><a href="compliance.html#history">Rate history since 2017</a></li>
           <li><a href="compliance.html#limitation">Notice &amp; order dates</a></li>
+          <li><a href="compliance.html#itc">Input tax credit</a></li>
         </ul>
       </div>
       <div>
-        <h4>GST Pragyan</h4>
+        <h4>More</h4>
         <ul>
-          <li><a href="about.html" aria-current="page">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="index.html#tool">Desktop tool</a></li>
+          <li><a href="index.html#tool">The desktop tool</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#download">Getting it</a></li>
           <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="mailto:pragyan.gst@gmail.com">pragyan.gst@gmail.com</a></li>
         </ul>
       </div>
     </div>
     <div class="rule">
-      <p>GST Pragyan is an independent working aid. It is intended for reference and working purposes; verify the applicable law, notifications and facts before relying on any figure or conclusion.</p>
-      <p style="margin:0">© 2026 GST Pragyan. Built to make GST work a little clearer.</p>
+      <p>GST Pragyan is an independent working aid. It is not published by, endorsed by or
+      affiliated with the Central Board of Indirect Taxes and Customs, the GST Network or
+      any Government of India body. “GST”, “GSTN” and the names of the statutory forms are
+      used descriptively.</p>
+      <p style="margin:0">© 2026 GST Pragyan. For reference only — verify before you rely on it.</p>
     </div>
   </div>
-</footer></body></html>
+</footer>
+
+
+</body>
+</html>
