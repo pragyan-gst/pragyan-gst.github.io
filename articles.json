@@ -1,6 +1,28 @@
 {
   "articles": [
     {
+      "slug": "2026-09-12-gst-changes-april-2026",
+      "title": "GST Changes from 1 April 2026: What Changed, What Did Not",
+      "date": "2026-09-12",
+      "reviewed": "2026-09-12",
+      "summary": "A date-sensitive guide to the GST changes around 1 April 2026, including intermediary services, the GST appellate framework, and the Finance Act amendments to discounts and refunds that were enacted but remained subject to a separate commencement notification.",
+      "tags": [
+        "Compliance",
+        "Appeals",
+        "Rates",
+        "Other"
+      ],
+      "audience": [
+        "Tax Professionals",
+        "GST Officers",
+        "Taxpayers"
+      ],
+      "legal_basis": "Finance Act, 2026 (No. 4 of 2026), sections 1(2), 101A, 13(8)(b), and 153 to 157; Notification No. 02/2026-Central Tax dated 7 May 2026, read with Corrigendum S.O. 2349(E) dated 8 May 2026; GST Council Secretariat Newsletter, March 2026.",
+      "common_pitfall": "Do not treat every GST amendment in the Finance Act, 2026 as operative from 1 April 2026. Sections 153 to 155 require a separate commencement notification, while the intermediary amendment under section 157 took effect on 30 March 2026 and the section 101A(1A) change took effect on 1 April 2026.",
+      "related_reference": "",
+      "related_calculator": ""
+    },
+    {
       "slug": "2026-09-03-rate-rationalisation",
       "title": "The September 2025 rate change, and the two dates that catch people out",
       "date": "2026-09-03",

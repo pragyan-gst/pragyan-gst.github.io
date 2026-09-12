@@ -12,7 +12,7 @@ The public site stays on GitHub Pages. Decap's GitHub backend needs an authentic
 4. Set the OAuth callback to the `/callback` route of that proxy.
 5. In `admin/config.yml`, replace:
 
-       base_url: https://YOUR-OAUTH-PROXY.example.com
+       base_url: https://gst-pragyan-cms-auth.pragyangst.workers.dev
 
    with the proxy base URL.
 6. Keep `auth_endpoint: auth` unless the selected proxy uses a different path.

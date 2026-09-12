@@ -247,6 +247,10 @@ a:focus-visible,.btn:focus-visible,button:focus-visible,input:focus-visible,sele
   .btn{font-size:.98rem}
 }
 
+/* Article feature graphic */
+.article-hero-image{margin:0 0 34px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#F7FAF8;box-shadow:var(--shadow)}
+.article-hero-image img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.article-hero-image figcaption{padding:9px 14px;font-size:.78rem;color:var(--ink-soft);background:#F7FAF8;border-top:1px solid var(--line)}
 /* CMS-generated article polish */
 .article-review{margin:0 0 28px;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:#F7FAF9;color:var(--ink-soft);font-size:.9rem}
 .article-topic-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
