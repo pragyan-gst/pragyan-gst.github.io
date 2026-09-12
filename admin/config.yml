@@ -8,7 +8,7 @@ backend:
   name: github
   repo: pragyan-gst/pragyan-gst.github.io
   branch: main
-  base_url: https://YOUR-OAUTH-PROXY.example.com
+  base_url: https://gst-pragyan-cms-auth.pragyangst.workers.dev
   auth_endpoint: auth
   squash_merges: true
 
