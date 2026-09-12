@@ -1,93 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GST Pragyan: turn GST data into a useful working file</title>
-<meta name="description" content="GST Pragyan brings an offline desktop GST analysis workflow together with practical calculators, due dates, limitation timelines, charts and statutory reference. Merge returns and e-Way Bill data, compare sources and surface discrepancies.">
-<meta property="og:title" content="GST Pragyan: turn GST data into a useful working file"><meta property="og:description" content="Merge GST returns and e-Way Bill data, compare sources, find discrepancies and use practical GST calculators and reference charts."><meta property="og:type" content="website"><meta property="og:image" content="assets/og.jpg">
-<meta name="theme-color" content="#0A2742"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><link rel="icon" href="assets/mark-64.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GST Pragyan — read your GST returns, don't just file them</title>
+<meta name="description" content="Free GST reference and calculators: due dates, late fee and interest from 01.07.2017 with every notification, limitation dates for notices and orders, and a desktop tool that reconciles GSTR-1, 3B, 2A and 2B.">
+<meta property="og:title" content="GST Pragyan — read your GST returns">
+<meta property="og:description" content="Free GST charts and calculators, and a desktop tool that reconciles the returns and prepares an ASMT-10 reference.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="theme-color" content="#0B2440">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="assets/mark-64.png">
+<link rel="apple-touch-icon" href="assets/mark.png">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site"><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/wordmark.png" alt="GST Pragyan"></a><nav><a href="#work">How it works</a><a href="compliance.html">GST desk</a><a href="#insights">Charts</a><a href="#utilities">Utilities</a><a href="#about">About</a><a class="nav-cta" href="#tool">Desktop tool</a></nav></div></header>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="assets/wordmark.png" alt="GST Pragyan" width="215" height="27" class="wm">
+    </a>
+    <nav>
+      <a href="#who">Who it's for</a>
+      <a href="compliance.html">Charts &amp; calculators</a>
+      <a href="compliance.html#rates">GST rates</a>
+      <a href="compliance.html#history">Late fee &amp; interest</a>
+      <a href="compliance.html#limitation">Notice &amp; order dates</a>
+      <a href="articles.html">Articles</a>
+      <a href="#tool">The tool</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
 <main id="main">
 
-<section class="hero">
-<div class="wrap">
-<div class="hero-grid">
-<div>
-<span class="eyebrow">A practical GST workbench</span>
-<h1>Don't just <em>file GST data.</em> Read it.</h1>
-<p class="lede">GST Pragyan is built around the work that happens after the download: merge returns, bring e-Way Bill data together, compare sources, spot discrepancies, understand the numbers and move from raw data to a useful working file.</p>
-<div class="cta-row hero-actions"><a class="btn btn-primary" href="#tool">See the desktop tool →</a><a class="btn btn-glass" href="compliance.html">Open GST desk</a></div>
-<p class="hero-note">Runs locally for the desktop workflow. Reference calculators run in the browser. No account is required.</p>
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Pragyan means insight</span>
+        <h1>The GST desk you wish you had <em>before the deadline.</em></h1>
+        <p class="lede">
+          A practical GST reference built around the questions people actually ask: “What is the last date?”, “Which section applies?”, “What was the law then?”, and “How much is it?” Clear timelines, visual charts and calculators — without making you dig through a wall of text.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="compliance.html#calc">Open the calculators →</a>
+          <a class="btn btn-glass" href="compliance.html#history">See the rate history</a>
+        </div>
+        <div class="badges">
+          <span class="chip chip-green">Free &amp; no sign-up</span>
+          <span class="chip chip-glass">Built for real GST work</span>
+          <span class="chip chip-glass">Source-led, not guess-led</span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="assets/mark.png" alt="The GST Pragyan mark — an eye and a bar chart inside the letter P"
+             width="300" height="390">
+      </div>
+    </div>
+    <div class="hero-dashboard" aria-label="GST Pragyan dashboard preview">
+      <div class="dash-top">
+        <div><span class="dash-kicker">TODAY AT A GLANCE</span><strong>Deadlines &amp; limitation</strong></div>
+        <span class="status-dot">Live reference</span>
+      </div>
+      <div class="dash-grid">
+        <div class="dash-card dash-alert"><span>Section 74A · FY 2024-25</span><b>SCN by 30 Jun 2029</b><small>42 months from annual-return due date</small></div>
+        <div class="dash-card"><span>Section 74 · FY 2023-24</span><b>Order by 31 Dec 2029</b><small>SCN at least 6 months before order</small></div>
+        <div class="dash-card"><span>Section 73 · FY 2023-24</span><b>Order by 31 Dec 2027</b><small>SCN at least 3 months before order</small></div>
+      </div>
+      <div class="dash-chart">
+        <div class="chart-title"><strong>Limitation horizon</strong><span>FY 2019-20 → FY 2025-26</span></div>
+        <div class="mini-bars" aria-hidden="true"><i style="height:38%"></i><i style="height:52%"></i><i style="height:61%"></i><i style="height:70%"></i><i style="height:82%"></i><i style="height:91%"></i><i style="height:100%"></i></div>
+        <div class="mini-axis"><span>2019-20</span><span>2022-23</span><span>2025-26</span></div>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="product-window" aria-label="GST Pragyan desktop analysis preview">
-<div class="window-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span style="margin-left:7px">GST Pragyan · Analysis workspace</span></div>
-<div class="window-body">
-<div class="window-title"><strong>Return comparison</strong><span>FY 2025-26 · consolidated view</span></div>
-<div class="metric-row"><div class="metric"><small>Sources merged</small><b>8</b></div><div class="metric green"><small>Matched</small><b>94.6%</b></div><div class="metric"><small>Exceptions</small><b>37</b></div></div>
-<div class="mock-chart"><div class="chart-top"><span>Tax reported vs tax expected</span><span>₹ lakh</span></div><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-<div class="mock-rows"><div class="mock-row"><b>GSTR-1 ↔ GSTR-3B</b><span class="ok">Aligned</span><span>0.8%</span></div><div class="mock-row"><b>GSTR-2B ↔ Purchase Register</b><span class="warn">Review</span><span>18 inv.</span></div><div class="mock-row"><b>E-Way Bill ↔ Returns</b><span class="risk">Mismatch</span><span>₹4.2L</span></div></div>
-</div></div>
-</div></div>
+
+<div class="stat-band">
+  <div class="wrap">
+    <div class="grid g4">
+      <div><div class="n">8 yrs</div><div class="l">of late fee and interest changes, with notifications</div></div>
+      <div><div class="n">13</div><div class="l">returns, with their due dates and QRMP variants</div></div>
+      <div><div class="n">30</div><div class="l">scrutiny parameters in the desktop tool</div></div>
+      <div><div class="n">3</div><div class="l">calculators — late fee, interest, limitation</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="insights" id="insights">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="chip chip-teal">Visual reference</span>
+      <h2 style="margin-top:14px">See the law before you read the table</h2>
+      <p>Quick visual answers for the deadlines and patterns that come up again and again in GST work.</p>
+    </div>
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-head"><div><span class="chart-label">DEMANDS</span><h3>SCN window by provision</h3></div><span class="chart-note">Months before order</span></div>
+        <div class="hbar"><span>Section 73</span><i><b style="width:50%"></b></i><strong>3 mo</strong></div>
+        <div class="hbar"><span>Section 74</span><i><b style="width:100%"></b></i><strong>6 mo</strong></div>
+        <div class="hbar"><span>Section 74A</span><i><b style="width:70%"></b></i><strong>42 mo</strong></div>
+        <small class="chart-source">74A: 42 months from annual-return due date; order within 12 months of notice, extendable by 6 months.</small>
+      </div>
+      <div class="chart-card">
+        <div class="chart-head"><div><span class="chart-label">RETURNS</span><h3>Monthly due-date map</h3></div><span class="chart-note">Ordinary dates</span></div>
+        <div class="vchart">
+          <div><i style="height:45%"></i><span>10</span></div><div><i style="height:82%"></i><span>11</span></div><div><i style="height:60%"></i><span>13</span></div><div><i style="height:100%"></i><span>20</span></div><div><i style="height:75%"></i><span>22</span></div><div><i style="height:84%"></i><span>24</span></div><div><i style="height:88%"></i><span>25</span></div>
+        </div>
+        <div class="vlabels"><span>10th</span><span>11th</span><span>13th</span><span>20th</span><span>22nd</span><span>24th</span><span>25th</span></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-head"><div><span class="chart-label">REFERENCE</span><h3>What changed over time?</h3></div><span class="chart-note">2017 → today</span></div>
+        <svg class="linechart" viewBox="0 0 520 170" role="img" aria-label="Illustrative timeline showing GST reference changes over time">
+          <path class="gridline" d="M35 135H500 M35 95H500 M35 55H500"/>
+          <path class="trend" d="M35 125 C90 115, 105 112, 145 104 S220 90, 255 80 S330 70, 365 58 S435 45, 500 32"/>
+          <circle cx="35" cy="125" r="5"/><circle cx="255" cy="80" r="5"/><circle cx="500" cy="32" r="5"/>
+          <text x="35" y="157">2017</text><text x="240" y="157">2021</text><text x="480" y="157">2026</text>
+        </svg>
+        <small class="chart-source">A visual cue to use the historical rate/notification tables rather than applying today's number backwards.</small>
+      </div>
+      <div class="chart-card chart-featured">
+        <div class="chart-head"><div><span class="chart-label">NEW REGIME</span><h3>Section 74A at a glance</h3></div><span class="chart-pill">FY 2024-25 onward</span></div>
+        <div class="steps">
+          <div><b>01</b><span>Annual return due</span><strong>31 Dec 2025*</strong></div>
+          <div><b>02</b><span>SCN latest</span><strong>30 Jun 2029</strong></div>
+          <div><b>03</b><span>Order</span><strong>12 months from SCN</strong></div>
+          <div><b>04</b><span>Extension</span><strong>+6 months max</strong></div>
+        </div>
+        <small class="chart-source">*Assumes the ordinary annual-return due date. Check notified extensions or other statutory adjustments for the relevant period.</small>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="work" class="paper"><div class="wrap">
-<div class="section-head"><span class="chip chip-teal">Start with the work</span><h2 style="margin-top:14px">What Pragyan can help you do</h2><p>A practical view of the current desktop workflow, without the jargon.</p></div>
-<div class="task-grid">
-<a class="task" href="#tool"><span class="num">01 · MERGE</span><h3>Bring returns together</h3><p>Merge all return types, or one type such as GSTR-1, GSTR-2A, GSTR-2B, GSTR-3B or e-Way Bill across multiple financial years.</p><span class="arrow">See the workflow →</span></a>
-<a class="task" href="#tool"><span class="num">02 · SCRUTINISE</span><h3>Find and explain discrepancies</h3><p>Run source-aware scrutiny parameters, split amounts by tax head, and trace a result back to the underlying data.</p><span class="arrow">See scrutiny features →</span></a>
-<a class="task" href="#evidence"><span class="num">03 · EVIDENCE</span><h3>Open the document behind it</h3><p>Use the Parameter Evidence Viewer for invoice-wise and document-wise detail before relying on a finding.</p><span class="arrow">See evidence workflow →</span></a>
-<a class="task" href="compliance.html#calc"><span class="num">04 · CALCULATE</span><h3>Check a number</h3><p>Use the browser calculators for delayed filing, Section 50(3) and limitation, alongside the GST reference tables.</p><span class="arrow">Open GST reference →</span></a>
-<a class="task" href="compliance.html#limitation"><span class="num">05 · VERIFY</span><h3>Check the rule and the date</h3><p>Use due dates, reliefs, limitation timelines, ITC rules, reversals, RCM and e-Way Bill references.</p><span class="arrow">Open the reference desk →</span></a>
-</div></div></section>
+<section id="who">
+  <div class="wrap">
+    <div class="section-head center">
+      <h2>Whoever you are, the law is the same</h2>
+      <p>What differs is the question you arrive with. Start where it fits.</p>
+    </div>
+    <div class="audience">
+      <div class="aud a1">
+        <div class="tag">Taxpayers &amp; businesses</div>
+        <h3>“What do I owe, and by when?”</h3>
+        <p>Work out the late fee and interest on a return filed late, check a due date
+        before you miss it, and see how long the department has to raise a demand.</p>
+        <a class="go" href="compliance.html#calc">Calculate late fee &amp; interest →</a>
+      </div>
+      <div class="aud a2">
+        <div class="tag">Tax professionals</div>
+        <h3>“Which notification applied then?”</h3>
+        <p>A dated history of every rate and cap since 01.07.2017, so a period from years
+        ago is computed on the law as it stood, not as it stands now.</p>
+        <a class="go" href="compliance.html#history">Open the rate history →</a>
+      </div>
+      <div class="aud a3">
+        <div class="tag">Departmental officers</div>
+        <h3>“Is this still within time?”</h3>
+        <p>Limitation dates for notices and orders under Sections 73, 74 and 74A, year by
+        year, with the extension notifications — and a tool that reconciles the returns.</p>
+        <a class="go" href="compliance.html#limitation">Notice &amp; order dates →</a>
+      </div>
+      <div class="aud a4">
+        <div class="tag">Students &amp; learners</div>
+        <h3>“How does this fit together?”</h3>
+        <p>Every figure states the section or notification it rests on, so you can follow
+        it back to the source instead of memorising a number.</p>
+        <a class="go" href="compliance.html">Start with the charts →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section class="product-section"><div class="wrap">
-<div class="section-head"><span class="chip chip-navy">The core idea</span><h2 style="margin-top:14px">From return files to a traceable finding.</h2><p>The desktop tool is the centre of GST Pragyan. The website surrounds it with the calculations and reference material you need while doing the work.</p></div>
-<div class="workflow">
-<div class="flow"><span class="fno">01</span><h3>Merge</h3><p>Bring return and e-Way Bill files together across one or more financial years.</p></div>
-<div class="flow"><span class="fno">02</span><h3>Check sources</h3><p>See which statements are available, which are incomplete, and which parameters can be tested.</p></div>
-<div class="flow"><span class="fno">03</span><h3>Analyse</h3><p>Compare by month, tax head, invoice, supplier, document or scrutiny parameter.</p></div>
-<div class="flow"><span class="fno">04</span><h3>Open evidence</h3><p>Move from a parameter amount to the invoice or document behind it.</p></div>
-<div class="flow"><span class="fno">05</span><h3>Review</h3><p>Reconcile amounts already paid or reversed before treating a result as outstanding.</p></div>
-</div>
-</div></section>
+<section class="paper" id="reference">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="chip chip-teal">Free reference</span>
+      <h2 style="margin-top:14px">What's in the charts</h2>
+      <p>All on one page, each figure with the provision or notification beside it.</p>
+    </div>
+    <div class="grid g3">
+      <a class="card lift" href="compliance.html#calc" style="color:inherit">
+        <div class="ico i-teal">∑</div>
+        <h3>Three calculators</h3>
+        <p>Late fee and interest on a delayed return; interest on credit wrongly availed;
+        and the limitation date for a notice or an order.</p>
+      </a>
+      <a class="card lift" href="compliance.html#duedates" style="color:inherit">
+        <div class="ico i-navy">◷</div>
+        <h3>Due dates</h3>
+        <p>Thirteen returns, monthly and quarterly, with the QRMP State groups and the
+        annual and final returns.</p>
+      </a>
+      <a class="card lift" href="compliance.html#history" style="color:inherit">
+        <div class="ico i-orange">⧗</div>
+        <h3>Rate history since 2017</h3>
+        <p>Every change to late fee and interest from 01.07.2017, dated, with the
+        notification that made it — including the COVID reliefs and the amnesties.</p>
+      </a>
+      <a class="card lift" href="compliance.html#limitation" style="color:inherit">
+        <div class="ico i-navy">⚖</div>
+        <h3>Notice and order dates</h3>
+        <p>Sections 73, 74 and 74A year by year, with the extension notifications and the
+        appeal timelines.</p>
+      </a>
+      <a class="card lift" href="compliance.html#itc" style="color:inherit">
+        <div class="ico i-teal">◧</div>
+        <h3>Input tax credit</h3>
+        <p>The Section 16(4) time limit year by year, the Section 16(2) conditions, and the
+        Sections 16(5) and 16(6) relief.</p>
+      </a>
+      <a class="card lift" href="compliance.html#reversal" style="color:inherit">
+        <div class="ico i-orange">⇅</div>
+        <h3>Reversals, RCM, e-Way Bill</h3>
+        <p>Rules 37, 37A, 38, 42, 43 and 86B; the main reverse charge entries; and e-Way
+        Bill thresholds and validity.</p>
+      </a>
+    </div>
+  </div>
+</section>
 
-<section id="insights" class="insights"><div class="wrap">
-<div class="section-head"><span class="chip chip-teal">Visual GST intelligence</span><h2 style="margin-top:14px">See the difference before you open the detail.</h2><p>Charts are working views, not decoration. They help you identify where to look before you open the detailed table.</p></div>
-<div class="chart-grid">
-<div class="chart-card"><div class="chart-head"><div><span class="chart-label">RECONCILIATION</span><h3>Tax variance by month</h3></div><span class="chart-note">Illustrative workspace</span></div><div class="vchart"><div><i style="height:44%"></i></div><div><i style="height:68%"></i></div><div><i style="height:51%"></i></div><div><i style="height:88%"></i></div><div><i style="height:62%"></i></div><div><i style="height:76%"></i></div><div><i style="height:42%"></i></div><div><i style="height:95%"></i></div></div><div class="vlabels"><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span></div><small class="chart-source">A practical visual for locating high-variance periods before invoice-level review.</small></div>
-<div class="chart-card"><div class="chart-head"><div><span class="chart-label">ITC</span><h3>Matched · review · missing</h3></div><span class="chart-note">Purchase reconciliation</span></div><div class="hbar"><span>Matched</span><i><b style="width:82%"></b></i><strong>82%</strong></div><div class="hbar"><span>Review</span><i><b style="width:13%"></b></i><strong>13%</strong></div><div class="hbar"><span>Missing</span><i><b style="width:5%"></b></i><strong>5%</strong></div><small class="chart-source">Designed to separate a genuine exception from records that simply need another source or date checked.</small></div>
-<div class="chart-card"><div class="chart-head"><div><span class="chart-label">LIMITATION</span><h3>Section 73 · 74 · 74A</h3></div><span class="chart-note">Demand timelines</span></div><div class="hbar"><span>73</span><i><b style="width:43%"></b></i><strong>3 yr</strong></div><div class="hbar"><span>74</span><i><b style="width:71%"></b></i><strong>5 yr</strong></div><div class="hbar"><span>74A</span><i><b style="width:100%"></b></i><strong>42 mo</strong></div><small class="chart-source">For FY 2024-25 onward, Section 74A uses a 42-month SCN window and an order period of 12 months from the notice, subject to the statutory extension provision.</small></div>
-<div class="chart-card"><div class="chart-head"><div><span class="chart-label">E-WAY BILL</span><h3>Movement vs reported supply</h3></div><span class="chart-note">Exception view</span></div><svg class="linechart" viewBox="0 0 520 170" role="img" aria-label="Illustrative e-Way Bill and return comparison chart"><path class="gridline" d="M35 135H500 M35 95H500 M35 55H500"/><path class="trend" d="M35 116 C92 111,118 91,155 101 S220 81,255 89 S325 55,365 68 S435 42,500 48"/><circle cx="35" cy="116" r="5"/><circle cx="255" cy="89" r="5"/><circle cx="500" cy="48" r="5"/><text x="35" y="157">Apr</text><text x="245" y="157">Jul</text><text x="485" y="157">Oct</text></svg><small class="chart-source">The same visual language can be used for outward supplies, e-Way Bill values, taxable turnover and other comparison series.</small></div>
-</div></div></section>
+<section id="tool">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="chip chip-navy">The desktop tool</span>
+      <h2 style="margin-top:14px">And when the charts aren't enough</h2>
+      <p>GST Pragyan is a desktop application that reads the returns you download from the
+      portal and reconciles them against each other.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card lift">
+        <div class="ico i-navy">▤</div>
+        <h3>Merge the returns</h3>
+        <p>GSTR-1, 3B, 2A, 2B, 9, 9C, IFF and the e-Way Bill report, for as many periods as
+        you have, stacked into one workbook. Columns are matched by their heading rather
+        than their position, so a change in the portal's export cannot silently read the
+        wrong column.</p>
+      </div>
+      <div class="card lift">
+        <div class="ico i-teal">◉</div>
+        <h3>Reconcile and check</h3>
+        <p>Thirty checks, each on its own worksheet with every column headed by the source
+        it reads. Each tax head is tested on its own, so an excess in one head is never
+        cancelled by a shortfall in another.</p>
+      </div>
+      <div class="card lift">
+        <div class="ico i-orange">⇄</div>
+        <h3>Match the purchases</h3>
+        <p>GSTR-2B against your purchase register, invoice by invoice, with Rule 37 ageing
+        on invoices unpaid beyond one hundred and eighty days.</p>
+      </div>
+      <div class="card lift">
+        <div class="ico i-green">◈</div>
+        <h3>Draft the ASMT-10 reference</h3>
+        <p>A Word draft with the statutory paragraph, the amount head by head and the
+        month-wise working — separated into what is quantified, what needs verification
+        first, and what is only information.</p>
+      </div>
+    </div>
+    <div class="note info">
+      <p><strong>It runs on your own computer.</strong> No account, no sign-in, no upload.
+      The returns you load and the workbooks it writes stay on the machine you run it on.
+      <a href="privacy.html">Read the privacy policy</a> — it is short.</p>
+    </div>
+  </div>
+</section>
 
-<section id="tool"><div class="wrap">
-<div class="tool-split"><div class="tool-copy"><span class="chip chip-navy">GST Pragyan desktop tool</span><h2 style="margin-top:14px">A working file that shows what changed.</h2><p style="font-size:1.08rem;color:var(--ink-2)">The tool is designed for the heavy lifting that is awkward in separate downloads: merging files, standardising periods, comparing sources and producing detailed discrepancy sheets.</p>
-<div class="tool-list"><div><span class="check">✓</span><span><strong>Merge one return type or everything</strong><br><small>Choose GSTR-1, GSTR-2A, GSTR-2B, GSTR-3B or e-Way Bill across multiple financial years, or merge the full set.</small></span></div><div><span class="check">✓</span><span><strong>Scrutinise with source awareness</strong><br><small>Missing source data is treated as not tested, not as a clean zero result.</small></span></div><div><span class="check">✓</span><span><strong>Open parameter evidence</strong><br><small>Move from a finding to invoice-wise detail, supplier details and the underlying return source.</small></span></div><div><span class="check">✓</span><span><strong>Reconcile paid and reversed amounts</strong><br><small>Interest, late fee and other applicable amounts distinguish gross calculation, amounts already reported, and net balance.</small></span></div><div><span class="check">✓</span><span><strong>Prepare working outputs</strong><br><small>Scrutiny analysis, evidence detail and the draft ASMT-10 reference remain connected to the same computed values.</small></span></div></div>
-<a class="btn btn-dark" href="mailto:pragyan.gst@gmail.com?subject=GST%20Pragyan%20Desktop%20Tool">Ask about the desktop tool →</a></div>
-<div class="tool-panel"><span class="chip chip-glass">Inside the workspace</span><h3 style="margin-top:15px">A result should be traceable, not mysterious.</h3><p>Every discrepancy view is intended to show the comparison, the source and the amount so the person reviewing it can investigate rather than simply accept a score.</p><div class="mini-table"><div class="head"><span>Check</span><span>Status</span><span>Variance</span></div><div><b>GSTR-1 vs 3B</b><span class="ok">Review</span><span>₹18,420</span></div><div><b>2B vs purchase register</b><span class="ok">Match</span><span>₹0</span></div><div><b>E-Way vs outward supply</b><span class="warn">Review</span><span>See detail</span></div><div><b>Parameter evidence</b><span class="risk">Open</span><span>Invoice-wise</span></div></div></div></div>
-</div></section>
+<section class="paper" id="honest">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="chip chip-orange">Read this bit</span>
+      <h2 style="margin-top:14px">What it will not do</h2>
+      <p>A tool that overstates what it knows is worse than no tool at all.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <div class="ico i-rose">✕</div>
+        <h3>It will not decide anything</h3>
+        <p>What it produces is a <strong>reference draft</strong>. Whether a figure becomes
+        a demand, a reply, or nothing at all is a judgement, and it stays with the person
+        making it.</p>
+      </div>
+      <div class="card">
+        <div class="ico i-rose">✕</div>
+        <h3>It will not report nil as a clean chit</h3>
+        <p>Where a statement was never imported, the check that reads it says
+        <strong>“not tested”</strong> and is excluded from every total. A nil that only
+        means “we could not look” is the most dangerous output a tool like this can give.</p>
+      </div>
+      <div class="card">
+        <div class="ico i-rose">✕</div>
+        <h3>It will not call a risk a conclusion</h3>
+        <p>A supplier's registration having been cancelled does not establish that the
+        recipient took the credit. Such figures are marked <strong>verification
+        required</strong> and kept out of the total.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section class="feature-band" id="evidence"><div class="wrap"><div class="section-head"><span class="chip chip-green">Current desktop capabilities</span><h2 style="margin-top:14px">Make every result traceable before you act on it.</h2><p>Pragyan is now designed around the complete review path: source check, calculation, evidence, payment or reversal reconciliation, and a review-ready working output.</p></div><div class="grid g3 feature-grid"><div class="card feature-card"><div class="ico i-teal">⌕</div><h3>Parameter Evidence Viewer</h3><p>Open the documents behind a flagged parameter, including invoice number, date, supplier and tax-head detail where available.</p></div><div class="card feature-card"><div class="ico i-navy">✓</div><h3>Source-aware scrutiny</h3><p>Every return-dependent parameter knows which statement it needs. Missing source data stays clearly marked as not tested.</p></div><div class="card feature-card"><div class="ico i-orange">₹</div><h3>Paid, reversed and net</h3><p>Where applicable, the working distinguishes calculated amounts from amounts already paid or reversed before showing a balance.</p></div><div class="card feature-card"><div class="ico i-navy">12</div><h3>Head-wise interest</h3><p>Interest stays split across IGST, CGST, SGST and Cess instead of being pushed into one tax head.</p></div><div class="card feature-card"><div class="ico i-teal">17(5)</div><h3>Manual only where judgement is needed</h3><p>Section 17(5) remains the manual scrutiny item; other parameter calculations are automated from the loaded data.</p></div><div class="card feature-card"><div class="ico i-orange">20</div><h3>e-Way Bill analysis</h3><p>Inward and outward e-Way Bills are de-duplicated and tested through the current set of twenty forensic checks in the desktop tool.</p></div></div></div></section>
+<section id="download">
+  <div class="wrap">
+    <div class="card" style="text-align:center;padding:44px">
+      <span class="chip chip-orange">Not yet published</span>
+      <h2 style="margin:18px 0 10px">The application is on its way</h2>
+      <p style="color:var(--ink-soft);max-width:60ch;margin:0 auto 24px">
+        The charts and calculators are free to use now. The desktop application is being
+        prepared for publication — write to us and we will tell you when it is ready.
+      </p>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn btn-primary" href="mailto:pragyan.gst@gmail.com?subject=Tell%20me%20when%20GST%20Pragyan%20is%20published&amp;body=Please%20let%20me%20know%20when%20the%20application%20is%20available.">Tell me when it's ready</a>
+        <a class="btn btn-outline" href="compliance.html">Use the free charts meanwhile</a>
+      </div>
+    </div>
+    <div class="note info">
+      <p><strong>A caution about copies from elsewhere.</strong> GST Pragyan is published
+      only from this site and from the address below. If you are offered a copy from any
+      other source, do not run it against real return data.</p>
+    </div>
+  </div>
+</section>
 
-<section class="paper" id="utilities"><div class="wrap">
-<div class="section-head"><span class="chip chip-orange">The everyday GST desk</span><h2 style="margin-top:14px">Reference tools for the questions that keep coming back.</h2><p>Keep the working references close while the desktop tool handles the larger datasets.</p></div>
-<div class="grid g3">
-<a class="card lift" href="compliance.html#calc"><div class="ico i-teal">∑</div><h3>GST calculators</h3><p>Delayed-return interest and late fee, interest on wrongly availed credit, and limitation-date calculations.</p></a>
-<a class="card lift" href="compliance.html#duedates"><div class="ico i-navy">◷</div><h3>Return due-date desk</h3><p>Monthly, quarterly and annual return due dates with the relevant filing context.</p></a>
-<a class="card lift" href="compliance.html#history"><div class="ico i-orange">⧗</div><h3>Historical changes</h3><p>Late-fee and interest changes from 01.07.2017 so an old period is checked against the law applicable then.</p></a>
-<a class="card lift" href="compliance.html#limitation"><div class="ico i-navy">⚖</div><h3>SCN &amp; order timelines</h3><p>Sections 73, 74 and 74A, including the different SCN and order windows.</p></a>
-<a class="card lift" href="compliance.html#itc"><div class="ico i-teal">◧</div><h3>ITC reference</h3><p>Section 16 timelines and conditions, reversals and related working points.</p></a>
-<a class="card lift" href="compliance.html#ewb"><div class="ico i-orange">⇄</div><h3>e-Way Bill &amp; ledgers</h3><p>Key validity, movement and electronic-ledger working references in one place.</p></a>
-</div></div></section>
 
-<section class="deadline-strip"><div class="wrap"><div class="deadline-head"><div><span class="chip chip-glass">Demand limitation</span><h2 style="margin-top:14px">Dates worth checking twice.</h2></div><p>Section 73 and Section 74 apply to periods up to FY 2023-24; Section 74A applies from FY 2024-25 onward. Use the calculator for the exact year and SCN date.</p></div><div class="regimes"><div class="regime"><span class="tag">SECTION 73</span><h3>Non-fraud cases</h3><div class="rline"><strong>3 years</strong><span>Order from annual-return due date</span></div><div class="rline"><strong>3 months</strong><span>Minimum SCN lead time</span></div></div><div class="regime"><span class="tag">SECTION 74</span><h3>Fraud / suppression</h3><div class="rline"><strong>5 years</strong><span>Order from annual-return due date</span></div><div class="rline"><strong>6 months</strong><span>Minimum SCN lead time</span></div></div><div class="regime"><span class="tag">SECTION 74A</span><h3>FY 2024-25 onward</h3><div class="rline"><strong>42 months</strong><span>SCN from annual-return due date</span></div><div class="rline"><strong>12 + 6 months</strong><span>Order window + statutory extension</span></div></div></div><div style="margin-top:22px"><a class="btn btn-primary" href="compliance.html#limitation">Open the limitation table →</a></div></div></section>
+<section class="paper" id="articles">
+  <div class="wrap">
+    <span class="chip chip-navy">Written weekly</span>
+    <h2>Latest articles</h2>
+    <p style="max-width:62ch">Short pieces on what has changed and what it means in
+    practice. Every figure cited to the provision it comes from.</p>
+    <div class="latest" id="latest-articles"></div>
+    <p style="margin-top:20px"><a class="btn btn-ghost" href="articles.html">All articles</a></p>
+  </div>
+</section>
 
-<section id="about"><div class="wrap"><div class="section-head center"><span class="chip chip-teal">Built around real work</span><h2 style="margin-top:14px">Useful first. Clear second.</h2><p>GST Pragyan is intended to feel like a capable desk assistant: it helps organise information, exposes differences and gives you the references to check the answer. It does not replace professional judgement or statutory verification.</p></div><div class="grid g3"><div class="card"><div class="ico i-navy">◎</div><h3>Traceable</h3><p>Prefer source columns, invoice-level details and visible calculations over unexplained scores.</p></div><div class="card"><div class="ico i-teal">⌂</div><h3>Local-first</h3><p>The desktop workflow is designed around files on your own computer rather than requiring your return data to be uploaded to a service.</p></div><div class="card"><div class="ico i-orange">!</div><h3>Human in the loop</h3><p>A discrepancy is a prompt to investigate, not a conclusion. The person reviewing the case remains in control.</p></div></div></div></section>
+<section class="paper" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <p>Questions, corrections and reports of a wrong figure are all welcome — the last
+      most of all.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card">
+        <div class="ico i-teal">✉</div>
+        <h3>Email</h3>
+        <p style="font-size:1.2rem;margin:8px 0 12px">
+          <a href="mailto:pragyan.gst@gmail.com">pragyan.gst@gmail.com</a></p>
+        <p>Please allow a few working days for a reply.</p>
+        <p style="margin-top:16px">
+          <a class="btn btn-outline" href="mailto:pragyan.gst@gmail.com?subject=GST%20Pragyan%20enquiry">Write to us</a>
+        </p>
+      </div>
+      <div class="card">
+        <div class="ico i-orange">⚠</div>
+        <h3>Found a figure that looks wrong?</h3>
+        <p>Tell us which chart or calculator, the period involved, the figure shown and the
+        figure you expected. <strong>Please do not attach real returns, GSTINs or taxpayer
+        names</strong> — a description is enough to find almost any defect.</p>
+        <p style="margin-top:16px">
+          <a class="btn btn-outline" href="mailto:pragyan.gst@gmail.com?subject=Correction%20to%20a%20figure&amp;body=Chart%20or%20calculator%3A%0APeriod%3A%0AFigure%20shown%3A%0AFigure%20expected%3A%0AProvision%20relied%20on%3A">Report a correction</a>
+        </p>
+      </div>
+    </div>
+    <div class="note warn">
+      <p><strong>This is a working aid, not an authority.</strong> Everything here is for
+      reference. Every figure must be verified against the return, and every legal position
+      against the Act, the Rules and the notifications in force for the period, before it is
+      relied on. Nothing on this site or in the application is legal or professional
+      advice.</p>
+    </div>
+  </div>
+</section>
 
-<section class="paper" id="contact"><div class="wrap"><div class="grid g2"><div><span class="chip chip-orange">Questions &amp; corrections</span><h2 style="margin-top:15px">Help make the reference better.</h2><p style="color:var(--ink-2);font-size:1.02rem">If you find a calculation, date or reference that needs correction, send the tax period, the figure shown and the provision you expected. Please do not send real taxpayer return data.</p><a class="btn btn-dark" href="mailto:pragyan.gst@gmail.com?subject=GST%20Pragyan%20correction">Write to GST Pragyan →</a></div><div class="card" style="background:#f7faf9"><h3>Important distinction</h3><p>GST Pragyan is an independent working aid. It is not published by, endorsed by or affiliated with CBIC, GSTN or any Government of India body. Verify the law, notifications and return data for the period before relying on an output.</p><p style="margin:0"><a href="privacy.html">Read the privacy policy →</a></p></div></div></div></section>
 </main>
-<footer class="site"><div class="wrap"><div class="cols"><div><a class="brand" href="index.html"><img src="assets/wordmark-light.png" alt="GST Pragyan"></a><p style="margin-top:14px;max-width:48ch">A practical GST workbench for return analysis, reconciliation, evidence and statutory reference.</p></div><div><h4>Work</h4><ul><li><a href="#tool">Desktop tool</a></li><li><a href="#evidence">Desktop features</a></li><li><a href="#insights">Charts</a></li><li><a href="#utilities">Utilities</a></li></ul></div><div><h4>Reference</h4><ul><li><a href="compliance.html#calc">Calculators</a></li><li><a href="compliance.html#limitation">Sections 73 / 74 / 74A</a></li><li><a href="compliance.html#history">History since 2017</a></li><li><a href="privacy.html">Privacy</a></li></ul></div></div><div class="rule"><p>GST Pragyan is an independent working aid and is not affiliated with or endorsed by CBIC, GSTN or any Government of India body. Statutory forms and terms are used descriptively.</p><p style="margin:0">© 2026 GST Pragyan. Verify the source, the rule and the period before you rely on an output.</p></div></div></footer>
-</body></html>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/wordmark-light.png" alt="GST Pragyan" width="210" height="26" class="wm">
+        </a>
+        <p style="margin-top:14px;max-width:44ch">
+          A free GST reference and a desktop tool for reading returns — for taxpayers,
+          professionals, officers and students alike.
+        </p>
+      </div>
+      <div>
+        <h4>Free reference</h4>
+        <ul>
+          <li><a href="compliance.html#calc">Calculators</a></li>
+          <li><a href="compliance.html#duedates">Due dates</a></li>
+          <li><a href="compliance.html#history">Rate history since 2017</a></li>
+          <li><a href="compliance.html#limitation">Notice &amp; order dates</a></li>
+          <li><a href="compliance.html#itc">Input tax credit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="index.html#tool">The desktop tool</a></li>
+          <li><a href="index.html#download">Getting it</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="mailto:pragyan.gst@gmail.com">pragyan.gst@gmail.com</a></li>
+          <li><a href="https://cbic-gst.gov.in" rel="noopener">CBIC GST portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rule">
+      <p>GST Pragyan is an independent working aid. It is not published by, endorsed by or
+      affiliated with the Central Board of Indirect Taxes and Customs, the GST Network or
+      any Government of India body. “GST”, “GSTN” and the names of the statutory forms are
+      used descriptively.</p>
+      <p style="margin:0">© 2026 GST Pragyan. For reference only — verify before you rely on it.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+/* The three most recent articles, from the same manifest that drives articles.html —
+   so publishing means editing one file, not two. Silent on failure: a home page that
+   loads is worth more than an error where a list would be. */
+(function () {
+  var host = document.getElementById("latest-articles");
+  if (!host || !window.fetch) return;
+  var M = ["January","February","March","April","May","June","July","August",
+           "September","October","November","December"];
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c];
+    });
+  }
+  fetch("articles.json", { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      var list = (d && d.articles) || [];
+      if (!list.length) { document.getElementById("articles").style.display = "none"; return; }
+      host.innerHTML = list.slice(0, 3).map(function (a) {
+        var p = String(a.date).split("-");
+        var when = p.length === 3
+          ? parseInt(p[2], 10) + " " + M[parseInt(p[1], 10) - 1] + " " + p[0] : a.date;
+        return '<article class="card art"><div class="art-meta">' + esc(when) + "</div>" +
+               '<h3><a href="articles/' + esc(a.slug) + '.html">' + esc(a.title) + "</a></h3>" +
+               "<p>" + esc(a.summary || "") + "</p></article>";
+      }).join("");
+    })
+    .catch(function () { document.getElementById("articles").style.display = "none"; });
+})();
+</script>
+</body>
+</html>

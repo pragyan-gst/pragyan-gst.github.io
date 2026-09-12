@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Articles — GST notifications, rules and dates explained | GST Pragyan</title>
+<meta name="description" content="Short, cited pieces on GST changes that matter in practice — rate notifications, limitation dates, reversal rules and the traps in each.">
+<meta property="og:title" content="Articles — GST notifications, rules and dates explained | GST Pragyan">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="theme-color" content="#0B2440">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="assets/mark-64.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="assets/wordmark.png" alt="GST Pragyan" width="215" height="27" class="wm">
+    </a>
+    <nav>
+      <a href="index.html#who">Who it's for</a>
+      <a href="compliance.html">Charts &amp; calculators</a>
+      <a href="#rates">GST rates</a>
+      <a href="#history">Late fee &amp; interest</a>
+      <a href="compliance.html#limitation">Notice &amp; order dates</a>
+      <a href="articles.html" aria-current='page'>Articles</a>
+      <a href="index.html#tool">The tool</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero slim">
+    <div class="wrap">
+      <span class="eyebrow">Written for practitioners and officers</span>
+      <h1>Articles</h1>
+      <p class="lede">Short pieces on what has changed and what it means in practice —
+      a notification, a rule, a date that catches people out. Every figure is cited to the
+      provision it comes from.</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div id="article-list">
+      <p id="list-status" class="muted">Loading the list&hellip;</p>
+    </div>
+
+    <noscript>
+      <div class="note info"><p>This list is built from
+      <span class="mono">articles.json</span>. With scripting off, open
+      <a href="articles/">the articles folder</a> directly, or use the links in the
+      footer.</p></div>
+    </noscript>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/wordmark-light.png" alt="GST Pragyan" width="210" height="26" class="wm">
+        </a>
+        <p style="margin-top:14px;max-width:44ch">
+          A free GST reference and a desktop tool for reading returns — for taxpayers,
+          professionals, officers and students alike.
+        </p>
+      </div>
+      <div>
+        <h4>Free reference</h4>
+        <ul>
+          <li><a href="compliance.html#calc">Calculators</a></li>
+          <li><a href="compliance.html#duedates">Due dates</a></li>
+          <li><a href="compliance.html#history">Rate history since 2017</a></li>
+          <li><a href="compliance.html#limitation">Notice &amp; order dates</a></li>
+          <li><a href="compliance.html#appeal">Appeals</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="index.html#tool">The desktop tool</a></li>
+          <li><a href="index.html#download">Getting it</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="mailto:pragyan.gst@gmail.com">pragyan.gst@gmail.com</a></li>
+          <li><a href="https://cbic-gst.gov.in" rel="noopener">CBIC GST portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rule">
+      <p>GST Pragyan is an independent working aid. It is not published by, endorsed by or
+      affiliated with the Central Board of Indirect Taxes and Customs, the GST Network or
+      any Government of India body.</p>
+      <p style="margin:0">© 2026 GST Pragyan. For reference only — verify before you rely on it.</p>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  var MONTHS = ["January","February","March","April","May","June","July",
+                "August","September","October","November","December"];
+  function pretty(iso) {
+    var p = String(iso).split("-");
+    if (p.length !== 3) return iso;
+    return parseInt(p[2], 10) + " " + MONTHS[parseInt(p[1], 10) - 1] + " " + p[0];
+  }
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c];
+    });
+  }
+  var host = document.getElementById("article-list");
+  var status = document.getElementById("list-status");
+
+  fetch("articles.json", { cache: "no-store" })
+    .then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    })
+    .then(function (data) {
+      var list = (data && data.articles) || [];
+      if (!list.length) {
+        status.textContent = "No articles published yet.";
+        return;
+      }
+      host.innerHTML = list.map(function (a) {
+        var tags = (a.tags || []).map(function (t) {
+          return '<span class="chip">' + esc(t) + "</span>";
+        }).join(" ");
+        return '<article class="card art">' +
+               '<div class="art-meta"><time datetime="' + esc(a.date) + '">' +
+               pretty(a.date) + "</time> " + tags + "</div>" +
+               '<h3><a href="articles/' + esc(a.slug) + '.html">' + esc(a.title) + "</a></h3>" +
+               "<p>" + esc(a.summary || "") + "</p>" +
+               '<p><a class="more" href="articles/' + esc(a.slug) + '.html">Read &rarr;</a></p>' +
+               "</article>";
+      }).join("");
+    })
+    .catch(function (err) {
+      // fetch() cannot read a file:// URL. Say so plainly rather than showing an
+      // empty page, because that is what a local preview will hit first.
+      status.innerHTML = "The list could not be loaded (" + esc(err.message) + "). " +
+        "If you are previewing locally, serve the folder over HTTP rather than opening " +
+        'the file directly: <span class="mono">python3 -m http.server 8000</span>.';
+    });
+})();
+</script>
+</body>
+</html>
