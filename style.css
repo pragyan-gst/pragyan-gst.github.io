@@ -264,13 +264,13 @@ a:focus-visible,.btn:focus-visible,button:focus-visible,input:focus-visible,sele
 
 
 /* Article reading refinement */
-.article-prose > p,
-.article-prose > ul,
-.article-prose > ol,
+.article-prose p,
+.article-prose li,
 .article-prose blockquote,
 .article-prose .note {
-  text-align: justify;
+  text-align: justify !important;
   text-justify: inter-word;
+  hyphens: auto;
 }
 .article-prose h2,
 .article-prose h3,

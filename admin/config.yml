@@ -51,6 +51,29 @@ collections:
         name: summary
         widget: text
         hint: One or two sentences used on the Articles page and in search results.
+      - label: Article graphic (optional)
+        name: graphic_image
+        widget: image
+        required: false
+        choose_url: false
+        allow_multiple: false
+        media_folder: /assets/articles
+        public_folder: /assets/articles
+        media_library:
+          config:
+            multiple: false
+            max_file_size: 512000
+        hint: "Upload one small, relevant graphic for display above the article. Recommended: WebP or PNG, preferably under 500 KB."
+      - label: Graphic alt text
+        name: graphic_alt
+        widget: string
+        required: false
+        hint: Briefly describe the graphic for screen readers.
+      - label: Graphic caption
+        name: graphic_caption
+        widget: string
+        required: false
+        hint: Optional caption shown below the graphic.
       - label: Topic
         name: topic
         widget: select
@@ -115,23 +138,10 @@ collections:
           - { label: Late Fee & Interest, value: calculators.html#calc-late-interest }
           - { label: ITC Interest, value: calculators.html#calc-itc-interest }
           - { label: Limitation Calculator, value: calculators.html#calc-limitation }
-      - label: Article graphic
-        name: graphic_image
-        widget: image
-        required: false
-        choose_url: false
-        hint: Optional small graphic shown above the article text. Use a clear, relevant image.
-      - label: Graphic alt text
-        name: graphic_alt
-        widget: string
-        required: false
-        hint: Briefly describe the image for accessibility.
-      - label: Graphic caption
-        name: graphic_caption
-        widget: string
-        required: false
-        hint: Optional short caption shown below the graphic.
       - label: Body
         name: body
         widget: markdown
-        hint: Use headings, short paragraphs, tables, blockquotes and links. Cite every substantive figure.
+        editor_components:
+          - image
+          - code-block
+        hint: Use headings, short paragraphs, tables, blockquotes and links. The image button can also insert an image inside the article body. Cite every substantive figure.
