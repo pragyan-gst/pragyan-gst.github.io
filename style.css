@@ -85,3 +85,86 @@ footer.site{background:var(--navy-deep);color:#AFC4D2;padding:52px 0 24px;font-s
 @media (prefers-reduced-motion: reduce){.hero.slim::before,.hero.slim::after{animation:none}.btn:hover,.task-card:hover,.quickstart-card:hover{transform:none}}
 @media(max-width:1050px){:root{--wrap:1180px}.wrap{padding:0 24px}}
 @media(max-width:760px){body{font-size:16px}.wrap{padding:0 18px}.hero.slim .wrap.narrow{max-width:1120px}.lede{font-size:1.05rem}}
+
+/* V4 visual and responsive polish */
+:root{--wrap:1360px}
+body{font-size:17px;line-height:1.7}
+.narrow{max-width:1260px}
+.prose{max-width:1060px}
+
+a:focus-visible,.btn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid rgba(217,130,43,.62);outline-offset:3px;border-radius:8px}
+
+/* The small orange marker is a dot, not a dash, so the section label reads naturally. */
+.eyebrow::before{width:8px;height:8px;flex:0 0 8px;background:var(--orange);box-shadow:0 0 0 4px rgba(217,130,43,.13);border-radius:50%}
+.eyebrow.dark::before{box-shadow:0 0 0 4px rgba(217,130,43,.10)}
+
+.btn-primary{box-shadow:inset 0 2px 0 rgba(255,220,170,.34),0 8px 18px rgba(4,88,70,.25)}
+.btn:hover{transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease,border-color .18s ease,color .18s ease}
+.search-trigger{border-top-width:3px;border-top-color:var(--orange)}
+.desktop-nav a[aria-current=page]::after{height:3px}
+
+.hero,.hero.slim,.hero-home{background-color:#0B2440;background-image:radial-gradient(circle at 82% 26%,rgba(103,215,166,.13) 0 1px,transparent 2px),radial-gradient(circle at 78% 28%,rgba(217,130,43,.18) 0 3px,transparent 4px),radial-gradient(circle at 88% 70%,rgba(255,255,255,.06) 0 1px,transparent 2px),linear-gradient(135deg,#09223C 0%,#123A61 54%,#0E6B57 100%);background-size:auto,auto,auto,auto}
+.hero.slim{padding:70px 0 74px;min-height:300px}
+.hero.slim .wrap{position:relative;z-index:2}
+.hero.slim::before{width:360px;height:360px;right:3%;top:-155px;border-color:rgba(103,215,166,.18);box-shadow:0 0 0 42px rgba(217,130,43,.035),0 0 110px rgba(103,215,166,.08)}
+.hero.slim::after{right:12%;top:36%;width:11px;height:11px;background:var(--orange);box-shadow:0 0 0 9px rgba(217,130,43,.10),0 0 35px rgba(217,130,43,.24)}
+.hero-slim-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,470px);gap:64px;align-items:center}
+.hero-visual{position:relative;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.18);box-shadow:0 18px 50px rgba(0,0,0,.16);border-radius:18px;padding:23px 24px;color:#fff;backdrop-filter:blur(10px);overflow:hidden}
+.hero-visual::after{content:"";position:absolute;right:-42px;bottom:-62px;width:170px;height:170px;border-radius:50%;border:1px solid rgba(103,215,166,.18);box-shadow:0 0 0 24px rgba(103,215,166,.04)}
+.hero-visual-kicker{font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:var(--green);margin-bottom:12px}
+.hero-visual-title{font-weight:800;font-size:1.1rem;letter-spacing:-.01em;margin-bottom:12px}
+.hero-visual-title span{color:#F4B46B;padding:0 3px}
+.hero-visual-row{display:flex;justify-content:space-between;gap:18px;padding:12px 0;border-top:1px solid rgba(255,255,255,.13);font-size:.82rem;position:relative;z-index:1}
+.hero-visual-row span{color:#D9E7EE}.hero-visual-row b{color:#fff;text-align:right}
+.hero-visual .hero-visual-row:last-child{border-bottom:1px solid rgba(255,255,255,.13)}
+
+/* More balanced sections on large displays, without making reading columns too wide. */
+.section-head{max-width:980px;margin-bottom:36px}
+.task-grid,.audience{gap:20px}
+.task-card,.aud{padding:24px}
+.workflow>div{padding:22px}
+.card{padding:24px}
+
+/* More intentional mobile menu and edge-case handling. */
+.mobile-nav[open] nav{animation:menuDrop .14s ease-out}
+@keyframes menuDrop{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.hero-preview{min-width:0}
+.hero-preview img{object-fit:cover;object-position:center top}
+.app-shot{image-rendering:auto}
+button,.btn,input,select{touch-action:manipulation}
+
+@media(max-width:1120px){
+  .hero-slim-grid{grid-template-columns:minmax(0,1fr) 360px;gap:38px}
+  .task-grid,.audience{grid-template-columns:repeat(2,1fr)}
+  .workflow{grid-template-columns:repeat(3,1fr)}
+  .workflow>div:nth-child(3n){border-right:0}
+}
+@media(max-width:880px){
+  .hero-slim-grid{grid-template-columns:1fr}
+  .hero-visual{max-width:650px}
+  .reference-layout{grid-template-columns:1fr}
+  .reference-nav{position:relative;top:auto;max-height:none}
+  .app-showcase-grid{grid-template-columns:1fr}
+  .app-showcase-copy{max-width:800px}
+}
+@media(max-width:760px){
+  body{font-size:16px;line-height:1.65}
+  .wrap{padding:0 18px}
+  .narrow{max-width:none}
+  .hero.slim{padding:54px 0 58px;min-height:0}
+  .hero-slim-grid{gap:28px}
+  .hero-visual{padding:19px}
+  .hero-visual-title{font-size:1rem}
+  .hero-visual-row{display:grid;grid-template-columns:1fr;gap:3px}
+  .hero-visual-row b{text-align:left}
+  .task-grid,.audience,.split-intro,.app-showcase-grid{grid-template-columns:1fr}
+  .task-card{min-height:220px}
+  .workflow{grid-template-columns:1fr}
+  .workflow>div{border-right:0!important}
+  .contact-grid,.quick-links{grid-template-columns:1fr}
+  .hero.slim::before{right:-120px;top:-170px;width:280px;height:280px}
+  .hero.slim::after{right:15%;top:29%}
+}
+@media print{
+  .hero.slim::before,.hero.slim::after,.hero-visual{display:none!important}
+}
