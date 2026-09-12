@@ -115,6 +115,22 @@ collections:
           - { label: Late Fee & Interest, value: calculators.html#calc-late-interest }
           - { label: ITC Interest, value: calculators.html#calc-itc-interest }
           - { label: Limitation Calculator, value: calculators.html#calc-limitation }
+      - label: Article graphic
+        name: graphic_image
+        widget: image
+        required: false
+        choose_url: false
+        hint: Optional small graphic shown above the article text. Use a clear, relevant image.
+      - label: Graphic alt text
+        name: graphic_alt
+        widget: string
+        required: false
+        hint: Briefly describe the image for accessibility.
+      - label: Graphic caption
+        name: graphic_caption
+        widget: string
+        required: false
+        hint: Optional short caption shown below the graphic.
       - label: Body
         name: body
         widget: markdown

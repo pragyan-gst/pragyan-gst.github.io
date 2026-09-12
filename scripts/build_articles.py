@@ -44,6 +44,9 @@ def parse_article(path: Path) -> dict:
         "common_pitfall": str(meta.get("common_pitfall", "")).strip(),
         "related_reference": str(meta.get("related_reference", "")).strip(),
         "related_calculator": str(meta.get("related_calculator", "")).strip(),
+        "graphic_image": str(meta.get("graphic_image", "")).strip(),
+        "graphic_alt": str(meta.get("graphic_alt", "")).strip(),
+        "graphic_caption": str(meta.get("graphic_caption", "")).strip(),
         "body": body,
     }
     required = ["title", "date", "summary", "legal_basis", "body"]
@@ -79,6 +82,22 @@ def esc(value: str) -> str:
     return html.escape(value, quote=True)
 
 
+def graphic_src(value: str) -> str:
+    """Convert a CMS media path into a path relative to generated article pages."""
+    value = str(value or "").strip()
+    if not value:
+        return ""
+    if value.startswith("http://") or value.startswith("https://"):
+        return value
+    if value.startswith("../"):
+        return value
+    if value.startswith("/"):
+        value = value.lstrip("/")
+    if value.startswith("assets/"):
+        return "../" + value
+    return "../assets/articles/" + value.lstrip("/")
+
+
 def render_article(article: dict) -> str:
     tags = "".join(f'<span class="chip">{esc(t)}</span>' for t in article["topic"])
     reviewed = (
@@ -104,6 +123,21 @@ def render_article(article: dict) -> str:
         if related else ""
     )
     body_html = md(article["body"])
+    graphic = ""
+    if article["graphic_image"]:
+        src = esc(graphic_src(article["graphic_image"]))
+        alt = esc(article["graphic_alt"] or article["title"])
+        caption = (
+            f'<figcaption>{esc(article["graphic_caption"])}</figcaption>'
+            if article["graphic_caption"] else ""
+        )
+        graphic = (
+            '<figure class="article-graphic">'
+            '<div class="article-graphic-brand"><img src="../assets/wordmark.png" alt="GST Pragyan" width="180" height="23" loading="lazy" decoding="async"></div>'
+            f'<img src="{src}" alt="{alt}" loading="eager" decoding="async">'
+            f'{caption}'
+            '</figure>'
+        )
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,7 +157,7 @@ def render_article(article: dict) -> str:
 <header class="site"><div class="wrap nav"><a class="brand" href="../index.html" aria-label="GST Pragyan home"><img src="../assets/wordmark.png" alt="GST Pragyan" width="215" height="27" class="wm"></a><div class="nav-tools"><button class="search-trigger" type="button" data-search-open aria-label="Search GST Pragyan" title="Search GST Pragyan (Ctrl K)"><span class="search-icon">⌕</span><span class="search-trigger-label">Search</span><kbd>Ctrl K</kbd></button><nav class="desktop-nav" aria-label="Primary navigation"><a href="../compliance.html">GST Reference</a><a href="../calculators.html">Calculators</a><a href="../app.html">Desktop Tool</a><a href="../articles.html" aria-current="page">Articles</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a></nav><details class="mobile-nav"><summary aria-label="Open navigation">Menu</summary><nav aria-label="Mobile navigation"><a href="../search.html">Search</a><a href="../compliance.html">GST Reference</a><a href="../calculators.html">Calculators</a><a href="../app.html">Desktop Tool</a><a href="../articles.html" aria-current="page">Articles</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a></nav></details></div></div></header>
 <main id="main">
 <section class="hero slim"><div class="wrap narrow"><span class="eyebrow"><a href="../articles.html" style="color:inherit">Articles</a> · <time datetime="{esc(article["date"])}">{pretty_date(article["date"])}</time></span><h1>{esc(article["title"])}</h1><p class="lede">{esc(article["summary"])}</p><div class="article-topic-row">{tags}</div></div></section>
-<section class="wrap prose article-prose">{reviewed}{body_html}<div class="article-source"><h2>Legal basis and links</h2>{legal}{pitfall}{related_html}</div></section>
+<section class="wrap prose article-prose">{reviewed}{graphic}{body_html}<div class="article-source"><h2>Legal basis and links</h2>{legal}{pitfall}{related_html}</div></section>
 </main>
 <footer class="site"><div class="wrap"><div class="footer-top"><div class="footer-brand"><a class="brand footer-mark" href="../index.html" aria-label="GST Pragyan home"><img src="../assets/mark.png" alt="" width="58" height="58"><span><strong>GST Pragyan</strong><small>Practical GST reference and working tools</small></span></a><p>A practical GST reference, calculators, articles and a Windows desktop application for working with downloaded GST data.</p><p class="footer-email"><a href="mailto:pragyan.gst@gmail.com">pragyan.gst@gmail.com</a> · <a href="../contact.html">Report an error</a></p></div><div><h4>Reference</h4><ul><li><a href="../compliance.html#duedates">Due dates</a></li><li><a href="../compliance.html#history">Late fee &amp; interest</a></li><li><a href="../compliance.html#limitation">Limitation</a></li><li><a href="../compliance.html#itc">Input tax credit</a></li><li><a href="../compliance.html#rates">GST rates</a></li></ul></div><div><h4>Tools</h4><ul><li><a href="../calculators.html">GST calculators</a></li><li><a href="../app.html">Desktop tool</a></li><li><a href="../articles.html">Articles</a></li><li><a href="../whats-new.html">What's New</a></li></ul></div><div><h4>GST Pragyan</h4><ul><li><a href="../about.html">About Us</a></li><li><a href="../contact.html">Contact Us</a></li><li><a href="../privacy.html">Privacy</a></li></ul></div></div><div class="footer-bottom"><p>GST Pragyan is an independent GST working and reference tool. It is not an official government website or government-affiliated service.</p><p>For reference and working purposes only. Verify the applicable Act, rule, notification, circular and record before relying on a figure or conclusion.</p><p>© 2026 GST Pragyan.</p></div></div></footer>
 <script src="../site.js" defer></script>
@@ -151,6 +185,9 @@ def build_articles_json(articles):
                 "common_pitfall": a["common_pitfall"],
                 "related_reference": a["related_reference"],
                 "related_calculator": a["related_calculator"],
+                "graphic_image": a["graphic_image"],
+                "graphic_alt": a["graphic_alt"],
+                "graphic_caption": a["graphic_caption"],
             }
             for a in articles
         ],

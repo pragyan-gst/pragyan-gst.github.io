@@ -17,9 +17,10 @@ legal_basis: Finance Act, 2026 (No. 4 of 2026), sections 1(2), 101A, 13(8)(b), a
 common_pitfall: Do not treat every GST amendment in the Finance Act, 2026 as operative from 1 April 2026. Sections 153 to 155 require a separate commencement notification, while the intermediary amendment under section 157 took effect on 30 March 2026 and the section 101A(1A) change took effect on 1 April 2026.
 related_reference: ""
 related_calculator: ""
+graphic_image: /assets/articles/gst-changes-april-2026.webp
+graphic_alt: "Infographic summarising key GST changes around 1 April 2026, including intermediary services, the GST appellate framework, post supply discounts and refunds."
+graphic_caption: "GST changes around 1 April 2026. Status checked on 12 September 2026."
 ---
-
-<figure class="article-hero-image"><img src="../assets/articles/gst-changes-april-2026.webp" alt="GST changes from 1 April 2026, showing the intermediary services change, the GST appellate framework, and the Finance Act amendments to discounts and refunds with their commencement status." loading="eager" decoding="async"><figcaption>GST changes around 1 April 2026. Status checked on 12 September 2026.</figcaption></figure>
 
 ## The first point to get right: 1 April 2026 was not a single commencement date
 

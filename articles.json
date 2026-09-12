@@ -20,7 +20,10 @@
       "legal_basis": "Finance Act, 2026 (No. 4 of 2026), sections 1(2), 101A, 13(8)(b), and 153 to 157; Notification No. 02/2026-Central Tax dated 7 May 2026, read with Corrigendum S.O. 2349(E) dated 8 May 2026; GST Council Secretariat Newsletter, March 2026.",
       "common_pitfall": "Do not treat every GST amendment in the Finance Act, 2026 as operative from 1 April 2026. Sections 153 to 155 require a separate commencement notification, while the intermediary amendment under section 157 took effect on 30 March 2026 and the section 101A(1A) change took effect on 1 April 2026.",
       "related_reference": "",
-      "related_calculator": ""
+      "related_calculator": "",
+      "graphic_image": "/assets/articles/gst-changes-april-2026.webp",
+      "graphic_alt": "Infographic summarising key GST changes around 1 April 2026, including intermediary services, the GST appellate framework, post supply discounts and refunds.",
+      "graphic_caption": "GST changes around 1 April 2026. Status checked on 12 September 2026."
     },
     {
       "slug": "2026-09-03-rate-rationalisation",
@@ -39,7 +42,10 @@
       "legal_basis": "Recommendations of the 56th GST Council meeting, 3 September 2025; Central Tax (Rate) notifications issued in September 2025 and December 2025; Rule 31D of the CGST Rules; Section 14 of the CGST Act, 2017.",
       "common_pitfall": "Do not treat 40% as the ordinary GST rate, or test a supply near a rate-change date by invoice date alone.",
       "related_reference": "compliance.html#rates",
-      "related_calculator": "calculators.html"
+      "related_calculator": "calculators.html",
+      "graphic_image": "",
+      "graphic_alt": "",
+      "graphic_caption": ""
     }
   ],
   "drafts": []
