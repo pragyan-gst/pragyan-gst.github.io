@@ -18,11 +18,11 @@ The public site remains static. Decap CMS writes the article content to GitHub, 
 
 The public website remains on GitHub Pages. The Decap GitHub backend requires GitHub authentication through an OAuth service or proxy. Decap's current documentation explains that the GitHub backend needs a server-side authentication step and supports an edge-worker or serverless OAuth proxy.
 
-The supplied `admin/config.yml` contains the repository and an explicit placeholder:
+The supplied `admin/config.yml` already points `base_url` at this site's deployed OAuth proxy:
 
-    base_url: https://YOUR-OAUTH-PROXY.example.com
+    base_url: https://gst-pragyan-cms-auth.pragyangst.workers.dev
 
-Replace this with the domain of the OAuth proxy used for the GitHub OAuth application. Do not put a GitHub client secret in `config.yml` or in any website file.
+If the proxy is ever redeployed elsewhere, update `base_url` to the new proxy's domain. Do not put a GitHub client secret in `config.yml` or in any website file.
 
 The OAuth application callback should point to the `/callback` route of that proxy, and the Decap admin page is:
 

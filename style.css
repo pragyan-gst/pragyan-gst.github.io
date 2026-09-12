@@ -223,8 +223,6 @@ footer.site{font-size:.96rem}.footer-top li{margin-bottom:9px}.footer-mark small
 .task-no,.workflow b{color:var(--teal-deep)}
 .footer-email a:first-child{color:var(--green)}
 
-a:focus-visible,.btn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline-color:rgba(22,141,115,.78)}
-
 /* Keep reading columns comfortable while allowing tables and working areas to use the screen. */
 .prose{max-width:1120px}.reference-content{max-width:1120px}
 .about-strip-inner>div:first-child{max-width:980px}

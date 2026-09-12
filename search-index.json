@@ -30,6 +30,28 @@
     "text": "Articles The September 2025 rate change, and the two dates that catch people out"
   },
   {
+    "title": "GST Quick Reference Sheet | GST Pragyan",
+    "description": "A printable one-page GST quick reference with ordinary due dates.",
+    "url": "quick-reference.html",
+    "kind": "Quick Reference",
+    "tags": [
+      "Quick Reference",
+      "Due Dates"
+    ],
+    "text": "GST dates at a glance. Ordinary monthly and quarterly return due dates. GSTR-1 GSTR-3B IFF PMT-06 CMP-08 GSTR-6 GSTR-7 GSTR-8. Late fee and interest. Limitation. Rates."
+  },
+  {
+    "title": "What's New | GST Pragyan",
+    "description": "A dated changelog of GST Pragyan website, reference and tool updates.",
+    "url": "whats-new.html",
+    "kind": "What's New",
+    "tags": [
+      "What's New",
+      "Changelog"
+    ],
+    "text": "See what changed. Workbench redesign. Privacy and site structure review."
+  },
+  {
     "title": "About GST Pragyan | How the Tool Is Built",
     "description": "An independent GST reference and desktop application. How it is built, and what it is not.",
     "url": "about.html",

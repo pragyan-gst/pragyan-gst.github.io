@@ -63,36 +63,6 @@
 <footer class="site"><div class="wrap"><div class="footer-top"><div class="footer-brand"><a class="brand footer-mark" href="index.html" aria-label="GST Pragyan home"><img src="assets/mark.png" alt="" width="58" height="58"><span><strong>GST Pragyan</strong><small>Practical GST reference and working tools</small></span></a><p>A practical GST reference, calculators, articles and a Windows desktop application for working with downloaded GST data.</p><p class="footer-email"><a href="mailto:pragyan.gst@gmail.com">pragyan.gst@gmail.com</a> · <a href="contact.html">Report an error</a></p></div><div><h4>Reference</h4><ul><li><a href="compliance.html#duedates">Due dates</a></li><li><a href="compliance.html#history">Late fee &amp; interest</a></li><li><a href="compliance.html#limitation">Limitation</a></li><li><a href="compliance.html#itc">Input tax credit</a></li><li><a href="compliance.html#rates">GST rates</a></li><li><a href="quick-reference.html">Quick reference sheet</a></li></ul></div><div><h4>Tools</h4><ul><li><a href="calculators.html">GST calculators</a></li><li><a href="app.html">Desktop tool</a></li><li><a href="articles.html">Articles</a></li><li><a href="whats-new.html">What's New</a></li></ul></div><div><h4>GST Pragyan</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy</a></li></ul></div></div><div class="footer-bottom"><p>GST Pragyan is an independent GST working and reference tool. It is not an official government website or government-affiliated service.</p><p>For reference and working purposes only. Verify the applicable Act, rule, notification, circular and record before relying on a figure or conclusion.</p><p>© 2026 GST Pragyan.</p></div></div></footer>
 
 
-<script>
-/* The three most recent articles, from the same manifest that drives articles.html, so publishing means editing one file, not two. Silent on failure: a home page that
-   loads is worth more than an error where a list would be. */
-(function () {
-  var host = document.getElementById("latest-articles");
-  if (!host || !window.fetch) return;
-  var M = ["January","February","March","April","May","June","July","August",
-           "September","October","November","December"];
-  function esc(s) {
-    return String(s).replace(/[&<>"]/g, function (c) {
-      return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c];
-    });
-  }
-  fetch("articles.json", { cache: "no-store" })
-    .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (d) {
-      var list = (d && d.articles) || [];
-      if (!list.length) { document.getElementById("articles").style.display = "none"; return; }
-      host.innerHTML = list.slice(0, 3).map(function (a) {
-        var p = String(a.date).split("-");
-        var when = p.length === 3
-          ? parseInt(p[2], 10) + " " + M[parseInt(p[1], 10) - 1] + " " + p[0] : a.date;
-        return '<article class="card art"><div class="art-meta">' + esc(when) + "</div>" +
-               '<h3><a href="articles/' + esc(a.slug) + '.html">' + esc(a.title) + "</a></h3>" +
-               "<p>" + esc(a.summary || "") + "</p></article>";
-      }).join("");
-    })
-    .catch(function () { document.getElementById("articles").style.display = "none"; });
-})();
-</script>
 <script src="site.js" defer></script>
 </body>
 </html>
