@@ -1,110 +1,74 @@
-# GST Pragyan , website
+# GST Pragyan, website
 
-Static pages. No framework, no build step, no dependencies.
+A lightweight static website for GST reference, calculators, articles and the GST Pragyan Windows desktop application. No framework or build step is required.
 
-    index.html        four questions, the application, recent writing
-    compliance.html   12 chart sections and 3 calculators
-    app.html          the application: what it does, how it works, questions
-    articles.html     the article index, built from articles.json
+## Site structure
+
+    index.html        task-oriented home page and application glimpse
+    compliance.html   GST reference, arranged by topic with sticky navigation
+    calculators.html  dedicated GST calculators
+    app.html          desktop application, real screenshot, workflow and FAQs
+    articles.html     article index, built from articles.json
     articles/         one HTML file per article, plus _TEMPLATE.html
-    articles.json     the article manifest, the only file to edit when publishing
-    about.html        what this is and how it is built
-    contact.html      one address, and what cannot be answered by email
+    articles.json     the article manifest
+    about.html        About GST Pragyan
+    contact.html      Contact Us
     privacy.html      privacy policy
-    style.css         one stylesheet for all of them
-    assets/           logo, wordmark and social preview (109 KB)
-    robots.txt        allows indexing
-    .nojekyll         tells GitHub Pages not to run Jekyll over the files
+    style.css         single responsive stylesheet
+    assets/           logo, social preview and optimised application screenshot
+    robots.txt        indexing instructions
+    .nojekyll         prevents GitHub Pages Jekyll processing
+
+## Design direction
+
+The site is intentionally practical rather than promotional. The primary navigation is:
+
+- GST Reference
+- Calculators
+- Desktop Tool
+- Articles
+- About Us
+- Contact Us
+
+The home page is organised around tasks: checking a date, calculating a figure, checking a provision, or analysing returns. The desktop application screenshot is an actual supplied application screen, not a mock-up.
+
+The site does not use the word “free” as marketing language. It also does not link to or name an external government website in the site navigation or footer.
 
 ## Publishing an article
 
-One new file and one new line. Weekly is the intended rhythm; nothing breaks if you skip
-a week.
-
 1. Copy `articles/_TEMPLATE.html` to `articles/YYYY-MM-DD-short-slug.html`.
-2. Write it. Replace the `<title>`, the description and og:title in the head, the date in
-   the `<time>` element, the heading and the lede. Cite the provision for every figure.
-3. Add one entry at the **top** of the `articles` array in `articles.json`:
-
-       { "slug":    "YYYY-MM-DD-short-slug",
-         "title":   "...",
-         "date":    "YYYY-MM-DD",
-         "summary": "One or two sentences.",
-         "tags":    ["Rates"] }
-
-   The slug must match the file name without `.html`.
-4. Commit both files. The index page and the three-card strip on the home page both read
-   `articles.json`, so there is nothing else to update.
-
-To **unpublish** without deleting, move the entry from `articles` to `drafts`. The page
-stays on the server and drops off every list.
-
-Two things worth knowing:
-
-- The lists are built by `fetch()`, which cannot read a `file://` URL. Opening
-  `articles.html` by double-clicking shows an explanatory message instead of the list.
-  Serve over HTTP to preview , see below. On GitHub Pages it just works.
-- The article pages themselves are plain static HTML with no scripting, so they are
-  indexed and readable regardless.
+2. Replace the title, description, date, heading and article content. Cite the legal basis for each substantive figure.
+3. Add the article at the top of the `articles` array in `articles.json`.
+4. Commit both files. The home page and article index read the same manifest.
 
 ## Preview locally
 
-    python3 -m http.server 8000     # then open http://localhost:8000
+    python3 -m http.server 8000
+
+Then open `http://localhost:8000`.
 
 ## Editing
 
-- **Email** , search for `pragyan.gst@gmail.com`; it appears on several pages.
-- **Navigation** , the `<nav>` block is the same on every page. Change one, change all.
-- **Download link** , `index.html`, the section with `id="download"`. Replace the two
-  buttons with a real link when the app is published.
-- **Colours** , the `:root` block at the top of `style.css`.
-- **Statutory figures** , `compliance.html`. The hero carries a review date; change it
-  whenever you check the figures, and change the "Last updated" line in `privacy.html`
-  whenever that policy changes.
-- **Rates** , section 12 of `compliance.html`. It must agree with
-  `gstk/rate_registry.json` in the desktop tool; if you change one, change the other.
-- **Limitation dates** , the `YEARS` object in the script at the foot of
-  `compliance.html` drives the third calculator. Each year has the annual return due date
-  and the s.73 / s.74 notice and order dates. Add a year by copying an entry.
+- Email: search for `pragyan.gst@gmail.com`.
+- Navigation/footer: the common blocks are duplicated in each static page.
+- Home page application link: `index.html#tool`.
+- Application request section: `app.html#download`.
+- Colours and responsive layout: the `:root` block and media queries in `style.css`.
+- GST reference content: `compliance.html`.
+- Calculator logic: the script at the foot of `calculators.html`.
+- Article list: `articles.json`.
 
-## What to review, and when
+## Privacy and performance
 
-The charts are only as good as their last review. Two things change often:
+The website uses system fonts and no third-party font CDN, analytics, advertising or tracking scripts. The application screenshot is stored as a compressed WebP asset (`assets/gst-pragyan-app.webp`) to keep the page lightweight.
 
-- **Due dates** are extended by notification, sometimes at a few days' notice.
-- **Limitation dates for FY 2018-19 and 2019-20** rest on Notification No. 56/2023-CT,
-  which is under challenge in several High Courts. If it is struck down those two rows
-  change, and the page says so , keep that caveat until the position settles.
+## Hosting
 
-## Logo assets
-
-Generated from the supplied artwork with the white background flood-filled away from the
-EDGES only, so the white eye and bars inside the mark stay white. Knocking out every white
-pixel makes them transparent and the mark falls apart on the navy hero.
-
-    mark.png            300px  the P mark, transparent
-    mark-64.png          64px  favicon
-    wordmark.png        860px  header, on light backgrounds
-    wordmark-light.png  860px  footer, navy letters recoloured white
-    lockup.png          700px  stacked mark + wordmark
-    og.jpg        1200x630px   social preview
-
-## Hosting: GitHub Pages
-
-1. Create a public repository, e.g. `pragyan-site`.
-2. Upload these files to the root of the `main` branch.
-3. Settings → Pages → Source: *Deploy from a branch* → `main` / `/ (root)` → Save.
-4. Live in a minute or two at `https://<username>.github.io/pragyan-site/`.
-
-Custom domain: Settings → Pages → Custom domain, then at your registrar add a CNAME
-record pointing to `<username>.github.io`. Tick *Enforce HTTPS* once the certificate is
-issued.
+The site is suitable for GitHub Pages or any ordinary static host. Upload the contents of this directory to the selected site root.
 
 ## House style
 
-- **No em-dashes.** They were removed from every page. A comma, a full stop or a pair of
-  brackets says the same thing and reads more plainly.
-- **No first-person claims about who writes it.** The site describes the reference and the
-  application, not the author. Keep it that way.
-- **Nothing decorative that looks like data.** An illustrative chart on a page people check
-  figures against cannot be told apart from a real one.
+- Use commas, full stops or parentheses instead of em-dashes.
+- Keep substantive GST figures dated and tied to the relevant legal provision.
+- Do not present illustrative graphics as statutory data.
+- Keep the distinction between a working aid and an official/legal conclusion clear.

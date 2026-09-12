@@ -3,14 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Articles. GST notifications, rules and dates explained | GST Pragyan</title>
+<title>GST Articles | Notifications, Rules & Dates Explained | GST Pragyan</title>
 <meta name="description" content="Short, cited pieces on GST changes that matter in practice, rate notifications, limitation dates, reversal rules and the traps in each.">
-<meta property="og:title" content="Articles. GST notifications, rules and dates explained | GST Pragyan">
+<meta property="og:title" content="GST Articles | Notifications, Rules & Dates Explained | GST Pragyan">
 <meta property="og:image" content="assets/og.jpg">
 <meta name="theme-color" content="#0B2440">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="assets/mark-64.png">
 </head>
@@ -19,17 +16,14 @@
 
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="index.html">
+    <a class="brand" href="index.html" aria-label="GST Pragyan home">
       <img src="assets/wordmark.png" alt="GST Pragyan" width="215" height="27" class="wm">
     </a>
-    <nav>
-      <a href="compliance.html">Charts</a>
-      <a href="compliance.html#calc">Calculators</a>
-      <a href="app.html">Application</a>
-      <a href="articles.html" aria-current="page">Articles</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <nav class="desktop-nav" aria-label="Primary navigation"><a href="compliance.html">GST Reference</a><a href="calculators.html">Calculators</a><a href="app.html">Desktop Tool</a><a href="articles.html" aria-current="page">Articles</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav>
+    <details class="mobile-nav">
+      <summary aria-label="Open navigation">Menu</summary>
+      <nav aria-label="Mobile navigation"><a href="compliance.html">GST Reference</a><a href="calculators.html">Calculators</a><a href="app.html">Desktop Tool</a><a href="articles.html" aria-current="page">Articles</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav>
+    </details>
   </div>
 </header>
 
@@ -59,43 +53,46 @@
 
 <footer class="site">
   <div class="wrap">
-    <div class="cols">
-      <div>
-        <a class="brand" href="index.html">
-          <img src="assets/wordmark-light.png" alt="GST Pragyan" width="210" height="26" class="wm">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand footer-mark" href="index.html" aria-label="GST Pragyan home">
+          <img src="assets/mark.png" alt="" width="58" height="58">
+          <span><strong>GST Pragyan</strong><small>Practical GST reference and working tools</small></span>
         </a>
-        <p style="margin-top:14px;max-width:44ch">
-          A free GST reference and a desktop tool for reading returns, for taxpayers,
-          professionals, officers and students alike.
-        </p>
+        <p>A practical GST reference, calculators, articles and a Windows desktop application for working with downloaded GST data.</p>
       </div>
       <div>
-        <h4>Free reference</h4>
+        <h4>Reference</h4>
         <ul>
-          <li><a href="compliance.html#calc">Calculators</a></li>
           <li><a href="compliance.html#duedates">Due dates</a></li>
-          <li><a href="compliance.html#history">Rate history since 2017</a></li>
-          <li><a href="compliance.html#limitation">Notice &amp; order dates</a></li>
-          <li><a href="compliance.html#appeal">Appeals</a></li>
+          <li><a href="compliance.html#history">Late fee &amp; interest</a></li>
+          <li><a href="compliance.html#limitation">Limitation</a></li>
+          <li><a href="compliance.html#itc">Input tax credit</a></li>
+          <li><a href="compliance.html#rates">GST rates</a></li>
         </ul>
       </div>
       <div>
-        <h4>More</h4>
+        <h4>Tools</h4>
         <ul>
-          <li><a href="app.html">The application</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          
-          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="calculators.html">GST calculators</a></li>
+          <li><a href="app.html">Desktop tool</a></li>
+          <li><a href="articles.html">Articles</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>GST Pragyan</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
           <li><a href="mailto:pragyan.gst@gmail.com">pragyan.gst@gmail.com</a></li>
         </ul>
       </div>
     </div>
-    <div class="rule">
-      <p>GST Pragyan is an independent working aid. It is not published by, endorsed by or
-      affiliated with the Central Board of Indirect Taxes and Customs, the GST Network or
-      any Government of India body.</p>
-      <p style="margin:0">© 2026 GST Pragyan. For reference only, verify before you rely on it.</p>
+    <div class="footer-bottom">
+      <p>GST Pragyan is an independent GST working and reference tool. It is not an official government website or government-affiliated service.</p>
+      <p>For reference and working purposes only. Verify the applicable Act, rule, notification, circular and record before relying on a figure or conclusion.</p>
+      <p>© 2026 GST Pragyan.</p>
     </div>
   </div>
 </footer>

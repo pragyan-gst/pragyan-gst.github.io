@@ -3,14 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GST charts, due dates, late fee &amp; interest since 2017, notice and order dates | GST Pragyan</title>
-<meta name="description" content="Free GST reference: return due dates, the full history of late fee and interest from 01.07.2017 with every notification, limitation dates for notices and orders under Sections 73, 74 and 74A, ITC time limits, reversal rules, RCM and e-Way Bill, with three calculators.">
-<meta property="og:title" content="GST charts, rate history since 2017 and free calculators">
+<title>GST Reference | Due Dates, ITC, Rates, Limitation &amp; More | GST Pragyan</title>
+<meta name="description" content="Practical GST reference: return due dates, the full history of late fee and interest from 01.07.2017 with every notification, limitation dates for notices and orders under Sections 73, 74 and 74A, ITC time limits, reversal rules, RCM and e-Way Bill, with three calculators.">
+<meta property="og:title" content="GST Reference, Rate History & Calculators">
 <meta property="og:image" content="assets/og.jpg">
 <meta name="theme-color" content="#0B2440">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="assets/mark-64.png">
 </head>
@@ -19,17 +16,14 @@
 
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="index.html">
+    <a class="brand" href="index.html" aria-label="GST Pragyan home">
       <img src="assets/wordmark.png" alt="GST Pragyan" width="215" height="27" class="wm">
     </a>
-    <nav>
-      <a href="compliance.html" aria-current="page">Charts</a>
-      <a href="compliance.html#calc">Calculators</a>
-      <a href="app.html">Application</a>
-      <a href="articles.html">Articles</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <nav class="desktop-nav" aria-label="Primary navigation"><a href="compliance.html" aria-current="page">GST Reference</a><a href="calculators.html">Calculators</a><a href="app.html">Desktop Tool</a><a href="articles.html">Articles</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav>
+    <details class="mobile-nav">
+      <summary aria-label="Open navigation">Menu</summary>
+      <nav aria-label="Mobile navigation"><a href="compliance.html" aria-current="page">GST Reference</a><a href="calculators.html">Calculators</a><a href="app.html">Desktop Tool</a><a href="articles.html">Articles</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav>
+    </details>
   </div>
 </header>
 
@@ -37,25 +31,14 @@
 
 <div class="hero" style="padding:56px 0 60px">
   <div class="wrap">
-    <span class="eyebrow">Free reference · updated 3 September 2026</span>
+    <span class="eyebrow">GST reference · updated 3 September 2026</span>
     <h1 style="max-width:22ch">The working GST reference, with the date, the rule, and the reason side by side.</h1>
     <p class="lede">
       From 01.07.2017 to today. Nothing here is stored or sent anywhere, the calculators
       run in your browser.
     </p>
     <div class="jump" style="margin-top:22px">
-      <a href="#calc">Calculators</a>
-      <a href="#duedates">Due dates</a>
-      <a href="#rates">GST rates</a>
-      <a href="#history">Late fee &amp; interest</a>
-      <a href="#latefee">Late fee now</a>
-      <a href="#interest">Interest now</a>
-      <a href="#limitation">Notice &amp; order dates</a>
-      <a href="#itc">Input tax credit</a>
-      <a href="#reversal">Reversals</a>
-      <a href="#rcm">Reverse charge</a>
-      <a href="#ewb">e-Way Bill</a>
-      <a href="#appeal">Appeals</a>
+      <a href="#duedates">Due dates</a> <a href="#history">Late fee &amp; interest</a> <a href="#limitation">Limitation</a> <a href="#itc">ITC</a> <a href="#rates">GST rates</a>
     </div>
   </div>
 </div>
@@ -72,104 +55,27 @@
       professional advice.</p>
     </div>
 
-    <!-- ============================================================ calculators -->
-    <h2 id="calc">1. Calculators</h2>
-    <p>Three, all running in your browser. Nothing you type is sent anywhere or stored.</p>
-
-    <h3 style="margin-top:26px">1.1 Late fee and interest on a delayed GSTR-3B</h3>
-    <div class="calc-shell">
-      <h3>Delayed return</h3>
-      <p>Interest is charged on the cash portion only, per Rule 88B(1).</p>
-      <div class="calc">
-        <div class="field"><label for="due">Due date of the return</label>
-          <input type="date" id="due" value="2024-05-20"></div>
-        <div class="field"><label for="filed">Date the return was furnished</label>
-          <input type="date" id="filed" value="2024-07-05"></div>
-        <div class="field"><label for="cash">Tax discharged in cash (₹)</label>
-          <input type="number" id="cash" min="0" step="1" value="150000"></div>
-        <div class="field"><label for="rate">Interest rate (% per annum)</label>
-          <input type="number" id="rate" min="0" step="0.1" value="18"></div>
-        <div class="field"><label for="turnover">Aggregate turnover, preceding year</label>
-          <select id="turnover">
-            <option value="nil">NIL return</option>
-            <option value="1.5">Up to ₹1.5 crore</option>
-            <option value="5" selected>₹1.5 crore to ₹5 crore</option>
-            <option value="big">Above ₹5 crore</option>
-          </select></div>
-        <div class="field"><label for="period">Tax period</label>
-          <select id="period">
-            <option value="new" selected>June 2021 or later</option>
-            <option value="old">Before June 2021</option>
-          </select></div>
-      </div>
-      <div class="calc-out" aria-live="polite">
-        <div class="box"><div class="lbl">Days of delay</div><div class="big" id="outDays">0</div></div>
-        <div class="box"><div class="lbl">Interest u/s 50(1)</div><div class="big" id="outInterest">₹0</div></div>
-        <div class="box hi"><div class="lbl">Late fee u/s 47(1)</div><div class="big" id="outFee">₹0</div></div>
-      </div>
-      <div class="calc-basis" id="outBasis">Enter the dates above.</div>
-    </div>
-
-    <h3 style="margin-top:34px">1.2 Interest on credit wrongly availed</h3>
-    <div class="calc-shell">
-      <h3>Section 50(3) with Rule 88B(3)</h3>
-      <p>Interest runs only where the credit was <em>utilised</em>, and only for the period
-      it stayed utilised.</p>
-      <div class="calc">
-        <div class="field"><label for="itcAmt">Credit wrongly availed and utilised (₹)</label>
-          <input type="number" id="itcAmt" min="0" step="1" value="500000"></div>
-        <div class="field"><label for="itcRate">Interest rate (% per annum)</label>
-          <input type="number" id="itcRate" min="0" step="0.1" value="18"></div>
-        <div class="field"><label for="itcFrom">Utilised from</label>
-          <input type="date" id="itcFrom" value="2023-08-20"></div>
-        <div class="field"><label for="itcTo">Reversed or paid on</label>
-          <input type="date" id="itcTo" value="2024-03-31"></div>
-      </div>
-      <div class="calc-out" aria-live="polite">
-        <div class="box"><div class="lbl">Days</div><div class="big" id="itcDays">0</div></div>
-        <div class="box hi"><div class="lbl">Interest</div><div class="big" id="itcOut">₹0</div></div>
-        <div class="box"><div class="lbl">Total with tax</div><div class="big" id="itcTotal">₹0</div></div>
-      </div>
-      <div class="calc-basis">Credit taken and reversed <em>without</em> being utilised
-      attracts no interest. Rule 88B(3). The rate was 24% until Section 50(3) was
-      substituted with retrospective effect from 01.07.2017; see the history below.</div>
-    </div>
-
-    <h3 style="margin-top:34px">1.3 Limitation, the last date for a notice or an order</h3>
-    <div class="calc-shell">
-      <h3>Sections 73, 74 and 74A</h3>
-      <p>Counted from the due date of the annual return for the financial year.</p>
-      <div class="calc">
-        <div class="field"><label for="limFy">Financial year</label>
-          <select id="limFy">
-            <option>2017-18</option><option>2018-19</option><option>2019-20</option>
-            <option>2020-21</option><option>2021-22</option><option selected>2022-23</option>
-            <option>2023-24</option><option>2024-25</option><option>2025-26</option>
-          </select></div>
-        <div class="field"><label for="limSec">Provision</label>
-          <select id="limSec">
-            <option value="73" selected>Section 73. FY up to 2023-24</option>
-            <option value="74">Section 74. FY up to 2023-24</option>
-            <option value="74A">Section 74A. FY 2024-25 onward</option>
-          </select></div>
-        <div class="field" id="limNoticeDateWrap" style="display:none"><label for="limNoticeDate">SCN issue date</label>
-          <input type="date" id="limNoticeDate" value="2029-06-30"></div>
-      </div>
-      <div class="calc-out" aria-live="polite">
-        <div class="box"><div class="lbl">Annual return due</div><div class="big" id="limAnnual"></div></div>
-        <div class="box"><div class="lbl">Notice by</div><div class="big" id="limNotice"></div></div>
-        <div class="box hi"><div class="lbl">Order by</div><div class="big" id="limOrder"></div></div>
-      </div>
-      <div class="calc-basis" id="limBasis">Choose a year and provision. For Section 74A, enter the actual SCN date to calculate the 12-month order deadline.</div>
-    </div>
-
-    <div class="note">
-      <p><strong>Estimates, and nothing more.</strong> The first assumes an ordinary due
-      date with no notified extension, delay counted in whole days, and interest on the
-      whole cash amount for the whole period. None of the three accounts for part payments,
-      amnesty schemes, or amounts already declared at Table 5.1 of the return.</p>
-    </div>
-
+    <div class="reference-layout">
+      <aside class="reference-nav" aria-label="GST reference sections">
+        <div class="reference-nav-title">On this page</div>
+        <a href="#duedates">Due dates</a>
+        <a href="#history">Late fee &amp; interest</a>
+        <a href="#latefee">Late fee now</a>
+        <a href="#interest">Interest now</a>
+        <a href="#limitation">Limitation</a>
+        <a href="#appeal">Appeals</a>
+        <a href="#itc">ITC</a>
+        <a href="#reversal">Reversals</a>
+        <a href="#rcm">Reverse charge</a>
+        <a href="#ewb">e-Way Bill</a>
+        <a href="#rates">GST rates</a>
+        <a class="reference-nav-tool" href="calculators.html">Open calculators →</a>
+      </aside>
+      <div class="reference-content">
+        <div class="reference-calculator-gateway" id="calc">
+          <div><span class="eyebrow dark">Calculators</span><h2>Need a number rather than a table?</h2><p>Use the dedicated GST calculators for delayed GSTR-3B, wrongly availed and utilised ITC, and limitation under Sections 73, 74 and 74A.</p></div>
+          <a class="btn btn-primary" href="calculators.html">Open GST Calculators</a>
+        </div>
     <!-- ============================================================ due dates -->
     <h2 id="duedates">2. Due dates of the returns</h2>
     <p>Ordinary due dates, before any extension notified for a particular period.</p>
@@ -609,9 +515,6 @@
       <a class="btn btn-outline" href="index.html">Back to the home page</a>
     </div>
 
-  </div>
-</section>
-
 
     <!-- ============================================================ rates -->
     <h2 id="rates">12. The rate structure, 2017, and the September 2025 change</h2>
@@ -697,178 +600,59 @@
     <strong>supplier</strong>, not the merchant exporter, who becomes liable for the
     differential tax with interest.</p>
 
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="site">
   <div class="wrap">
-    <div class="cols">
-      <div>
-        <a class="brand" href="index.html">
-          <img src="assets/wordmark-light.png" alt="GST Pragyan" width="210" height="26" class="wm">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand footer-mark" href="index.html" aria-label="GST Pragyan home">
+          <img src="assets/mark.png" alt="" width="58" height="58">
+          <span><strong>GST Pragyan</strong><small>Practical GST reference and working tools</small></span>
         </a>
-        <p style="margin-top:14px;max-width:44ch">
-          A free GST reference and a desktop tool for reading returns, for taxpayers,
-          professionals, officers and students alike.
-        </p>
+        <p>A practical GST reference, calculators, articles and a Windows desktop application for working with downloaded GST data.</p>
       </div>
       <div>
-        <h4>Free reference</h4>
+        <h4>Reference</h4>
         <ul>
-          <li><a href="compliance.html#calc">Calculators</a></li>
           <li><a href="compliance.html#duedates">Due dates</a></li>
-          <li><a href="compliance.html#history">Rate history since 2017</a></li>
-          <li><a href="compliance.html#limitation">Notice &amp; order dates</a></li>
-          <li><a href="compliance.html#appeal">Appeals</a></li>
+          <li><a href="compliance.html#history">Late fee &amp; interest</a></li>
+          <li><a href="compliance.html#limitation">Limitation</a></li>
+          <li><a href="compliance.html#itc">Input tax credit</a></li>
+          <li><a href="compliance.html#rates">GST rates</a></li>
         </ul>
       </div>
       <div>
-        <h4>More</h4>
+        <h4>Tools</h4>
         <ul>
-          <li><a href="app.html">The application</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          
-          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="calculators.html">GST calculators</a></li>
+          <li><a href="app.html">Desktop tool</a></li>
+          <li><a href="articles.html">Articles</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>GST Pragyan</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
           <li><a href="mailto:pragyan.gst@gmail.com">pragyan.gst@gmail.com</a></li>
         </ul>
       </div>
     </div>
-    <div class="rule">
-      <p>GST Pragyan is an independent working aid. It is not published by, endorsed by or
-      affiliated with the Central Board of Indirect Taxes and Customs, the GST Network or
-      any Government of India body.</p>
-      <p style="margin:0">© 2026 GST Pragyan. For reference only, verify before you rely on it.</p>
+    <div class="footer-bottom">
+      <p>GST Pragyan is an independent GST working and reference tool. It is not an official government website or government-affiliated service.</p>
+      <p>For reference and working purposes only. Verify the applicable Act, rule, notification, circular and record before relying on a figure or conclusion.</p>
+      <p>© 2026 GST Pragyan.</p>
     </div>
   </div>
 </footer>
 
-<script>
-(function () {
-  function inr(n) {
-    var s = Math.round(n).toString(), last3 = s.slice(-3), rest = s.slice(0, -3);
-    if (rest) last3 = "," + last3;
-    return "\u20b9" + rest.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + last3;
-  }
-  function days(a, b) {
-    var x = new Date(a), y = new Date(b);
-    if (isNaN(x) || isNaN(y)) return null;
-    return Math.max(0, Math.round((y - x) / 86400000));
-  }
-  function on(ids, fn) {
-    ids.forEach(function (i) {
-      var el = document.getElementById(i);
-      if (!el) return;
-      el.addEventListener("input", fn);
-      el.addEventListener("change", fn);
-    });
-    fn();
-  }
-
-  // ---------------------------------------------------------- 1. delayed return
-  var A = ["due", "filed", "cash", "rate", "turnover", "period"];
-  on(A, function () {
-    var g = function (i) { return document.getElementById(i); };
-    var d = days(g("due").value, g("filed").value);
-    var outDays = g("outDays"), outBasis = g("outBasis");
-    if (d === null) { outDays.textContent = "\u2014";
-                      outBasis.textContent = "Enter both dates."; return; }
-    outDays.textContent = d + (d === 1 ? " day" : " days");
-    if (d === 0) {
-      g("outInterest").textContent = "\u20b90";
-      g("outFee").textContent = "\u20b90";
-      outBasis.textContent = "Furnished on or before the due date \u2014 nothing is payable.";
-      return;
-    }
-    var cash = Math.max(0, parseFloat(g("cash").value) || 0),
-        rate = Math.max(0, parseFloat(g("rate").value) || 0);
-    g("outInterest").textContent = inr(cash * (rate / 100) * (d / 365));
-
-    var t = g("turnover").value, isNil = t === "nil",
-        perDay = isNil ? 20 : 50, slabbed = g("period").value === "new", cap, basis;
-    if (isNil) {
-      cap = slabbed ? 500 : 10000;
-      basis = slabbed ? "NIL return: \u20b920 per day, capped at \u20b9500."
-                      : "NIL return, period before June 2021: \u20b920 per day, capped at \u20b910,000.";
-    } else if (!slabbed) {
-      cap = 10000;
-      basis = "Period before June 2021: \u20b950 per day, capped at \u20b910,000 (\u20b95,000 per Act).";
-    } else if (t === "1.5") {
-      cap = 2000; basis = "Turnover up to \u20b91.5 crore: \u20b950 per day, capped at \u20b92,000.";
-    } else if (t === "5") {
-      cap = 5000; basis = "Turnover \u20b91.5\u20135 crore: \u20b950 per day, capped at \u20b95,000.";
-    } else {
-      cap = 10000; basis = "Turnover above \u20b95 crore: \u20b950 per day, capped at \u20b910,000.";
-    }
-    var raw = perDay * d, fee = Math.min(cap, raw);
-    g("outFee").textContent = inr(fee);
-    outBasis.textContent = basis
-      + (raw > cap ? " At " + d + " days the fee would be " + inr(raw) + "; the cap applies." : "")
-      + " Interest is charged on the cash portion only.";
-  });
-
-  // ---------------------------------------------------------- 2. credit wrongly availed
-  on(["itcAmt", "itcRate", "itcFrom", "itcTo"], function () {
-    var g = function (i) { return document.getElementById(i); };
-    var d = days(g("itcFrom").value, g("itcTo").value);
-    if (d === null) { g("itcDays").textContent = "\u2014"; return; }
-    var amt = Math.max(0, parseFloat(g("itcAmt").value) || 0),
-        rate = Math.max(0, parseFloat(g("itcRate").value) || 0),
-        interest = amt * (rate / 100) * (d / 365);
-    g("itcDays").textContent = d + (d === 1 ? " day" : " days");
-    g("itcOut").textContent = inr(interest);
-    g("itcTotal").textContent = inr(amt + interest);
-  });
-
-  // ---------------------------------------------------------- 3. limitation
-  var YEARS = {
-    "2017-18": { annual: "05.02.2020", n73: "30.09.2023", o73: "31.12.2023", n74: "05.08.2024", o74: "05.02.2025", note: "Extended dates retained from the reference table." },
-    "2018-19": { annual: "31.12.2020", n73: "31.01.2024", o73: "30.04.2024", n74: "30.06.2025", o74: "31.12.2025", note: "Extended dates retained from the reference table." },
-    "2019-20": { annual: "31.03.2021", n73: "31.05.2024", o73: "31.08.2024", n74: "30.09.2025", o74: "31.03.2026", note: "Extended dates retained from the reference table." },
-    "2020-21": { annual: "28.02.2022", n73: "30.11.2024", o73: "28.02.2025", n74: "31.08.2026", o74: "28.02.2027", note: "Ordinary limitation." },
-    "2021-22": { annual: "31.12.2022", n73: "30.09.2025", o73: "31.12.2025", n74: "30.06.2027", o74: "31.12.2027", note: "Ordinary limitation." },
-    "2022-23": { annual: "31.12.2023", n73: "30.09.2026", o73: "31.12.2026", n74: "30.06.2028", o74: "31.12.2028", note: "Ordinary limitation." },
-    "2023-24": { annual: "31.12.2024", n73: "30.09.2027", o73: "31.12.2027", n74: "30.06.2029", o74: "31.12.2029", note: "Ordinary limitation." },
-    "2024-25": { annual: "31.12.2025", s74a: true, n74a: "30.06.2029", note: "Section 74A: SCN within 42 months from annual-return due date; order within 12 months of SCN, extendable by up to 6 months." },
-    "2025-26": { annual: "31.12.2026", s74a: true, n74a: "30.06.2030", note: "Section 74A: SCN within 42 months from annual-return due date; order within 12 months of SCN, extendable by up to 6 months." }
-  };
-
-  function addMonthsISO(iso, months) {
-    var d = new Date(iso + "T00:00:00");
-    if (isNaN(d)) return null;
-    var day = d.getDate();
-    d.setMonth(d.getMonth() + months);
-    if (d.getDate() !== day) d.setDate(0);
-    return d;
-  }
-  function fmtDate(d) {
-    if (!d) return ", ";
-    return String(d.getDate()).padStart(2,"0") + "." + String(d.getMonth()+1).padStart(2,"0") + "." + d.getFullYear();
-  }
-  on(["limFy", "limSec", "limNoticeDate"], function () {
-    var g = function (i) { return document.getElementById(i); };
-    var y = YEARS[g("limFy").value];
-    if (!y) return;
-    var sec = g("limSec").value;
-    var wrap = g("limNoticeDateWrap");
-    wrap.style.display = sec === "74A" ? "block" : "none";
-    g("limAnnual").textContent = y.annual;
-    if (sec === "74A") {
-      g("limNotice").textContent = y.n74a || ", ";
-      var noticeISO = g("limNoticeDate").value;
-      var od = noticeISO ? addMonthsISO(noticeISO, 12) : null;
-      g("limOrder").textContent = od ? fmtDate(od) : "12 months from SCN";
-      g("limBasis").textContent = y.note + " The date above assumes the ordinary annual-return due date; enter the actual SCN date for the exact order deadline.";
-    } else {
-      var fraud = sec === "74";
-      g("limNotice").textContent = fraud ? y.n74 : y.n73;
-      g("limOrder").textContent = fraud ? y.o74 : y.o73;
-      g("limBasis").textContent = (fraud
-        ? "Section 74: order within 5 years of the annual-return due date; notice at least 6 months before the order limit. "
-        : "Section 73: order within 3 years of the annual-return due date; notice at least 3 months before the order limit. ") + y.note;
-    }
-  });
-})();
-</script>
 
 </body>
 </html>

@@ -3,175 +3,199 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GST Pragyan. GST charts, calculators and a desktop reconciliation tool</title>
-<meta name="description" content="Free GST reference: due dates, late fee and interest since 2017, limitation for notices and orders, and the rate structure after September 2025. Every figure cited.">
-<meta property="og:title" content="GST Pragyan. GST charts, calculators and a desktop reconciliation tool">
-<meta property="og:description" content="Free GST charts and calculators, and a desktop tool that reconciles the returns and prepares an ASMT-10 reference.">
+<title>GST Pragyan | GST Reference, Calculators &amp; Return Analysis</title>
+<meta name="description" content="Practical GST reference, calculators, articles and a Windows desktop tool for reconciling downloaded GST returns and analysing discrepancies.">
+<meta property="og:title" content="GST Pragyan | GST Reference, Calculators &amp; Return Analysis">
+<meta property="og:description" content="Understand GST, check dates and calculations, and work with downloaded GST return data using GST Pragyan.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/og.jpg">
 <meta name="theme-color" content="#0B2440">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="assets/mark-64.png">
 <link rel="apple-touch-icon" href="assets/mark.png">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="index.html">
+    <a class="brand" href="index.html" aria-label="GST Pragyan home">
       <img src="assets/wordmark.png" alt="GST Pragyan" width="215" height="27" class="wm">
     </a>
-    <nav>
-      <a href="compliance.html">Charts</a>
-      <a href="compliance.html#calc">Calculators</a>
-      <a href="app.html">Application</a>
-      <a href="articles.html">Articles</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <nav class="desktop-nav" aria-label="Primary navigation"><a href="compliance.html">GST Reference</a><a href="calculators.html">Calculators</a><a href="app.html">Desktop Tool</a><a href="articles.html">Articles</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav>
+    <details class="mobile-nav">
+      <summary aria-label="Open navigation">Menu</summary>
+      <nav aria-label="Mobile navigation"><a href="compliance.html">GST Reference</a><a href="calculators.html">Calculators</a><a href="app.html">Desktop Tool</a><a href="articles.html">Articles</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav>
+    </details>
   </div>
 </header>
-
 <main id="main">
-<div class="hero">
-  <div class="wrap narrow">
-    <h1>A working GST reference.</h1>
-    <p class="lede">Due dates. Late fee and interest since 2017. Limitation for notices and
-    orders. The rate structure after September 2025. Every figure states the section or
-    notification it rests on.</p>
-    <p class="lede">Free. No sign-up.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="compliance.html">Open the charts</a>
-      <a class="btn btn-glass" href="compliance.html#calc">Calculators</a>
+<section class="hero hero-home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">GST reference · calculators · desktop analysis</span>
+      <h1>Understand GST. Check GST. <em>Work GST.</em></h1>
+      <p class="lede">A practical place to check GST dates, rates, limitation, ITC and calculations, and a Windows application for working with the return data you already download.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="compliance.html">Open GST Reference</a>
+        <a class="btn btn-glass" href="calculators.html">Use Calculators</a>
+      </div>
+      <div class="hero-points">
+        <span>Section and notification based</span>
+        <span>Period-aware calculations</span>
+        <span>Desktop data stays on the computer</span>
+      </div>
     </div>
-  </div>
-</div>
-
-<section>
-  <div class="wrap narrow">
-    <h2>Four questions this answers</h2>
-    <div class="qa">
-      <div>
-        <h3>What do I owe, and by when?</h3>
-        <p>Late fee and interest on a return filed late, worked out on the law as it stood
-        for that period. <a href="compliance.html#calc">Calculators</a></p>
-      </div>
-      <div>
-        <h3>Which notification applied then?</h3>
-        <p>Every rate and cap since 1 July 2017, with the notification that changed it.
-        <a href="compliance.html#history">Late fee and interest</a></p>
-      </div>
-      <div>
-        <h3>Is this still within time?</h3>
-        <p>Limitation for notices and orders under Sections 73, 74 and 74A, year by year.
-        <a href="compliance.html#limitation">Notice and order dates</a></p>
-      </div>
-      <div>
-        <h3>What is the rate now?</h3>
-        <p>The September 2025 rationalisation, and the two dates that catch people out.
-        <a href="compliance.html#rates">GST rates</a></p>
-      </div>
+    <div class="hero-preview" aria-label="Glimpse of GST Pragyan desktop application">
+      <div class="preview-bar"><span>GST Pragyan Desktop</span><span class="preview-status">Offline workspace</span></div>
+      <img src="assets/gst-pragyan-app.webp" alt="GST Pragyan desktop application showing the Merge GST Returns workspace">
+      <div class="preview-caption">Actual GST Pragyan application screen from the current build.</div>
     </div>
   </div>
 </section>
 
-<section class="paper">
-  <div class="wrap narrow">
-    <h2>The desktop application</h2>
-    <p>GST Pragyan reads the returns downloaded from the portal and reconciles them against
-    each other. It merges the returns into one workbook, runs the scrutiny checks, matches
-    purchases against GSTR-2B, and drafts an ASMT-10 reference.</p>
-    <p>It runs on your own computer. No account, no upload.</p>
-    <p><a href="app.html">What it does, and how &rarr;</a></p>
+<section class="task-section" id="who">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow dark">Start with the task</span>
+      <h2>What do you need to do?</h2>
+      <p>GST Pragyan is organised around the questions that come up in day-to-day GST work, not around a long list of features.</p>
+    </div>
+    <div class="task-grid">
+      <a class="task-card" href="compliance.html#duedates"><span class="task-no">01</span><h3>Check a date</h3><p>Return due dates, limitation periods, appeal timelines and the dates that matter for a particular financial year.</p><span class="task-link">Open reference →</span></a>
+      <a class="task-card" href="calculators.html"><span class="task-no">02</span><h3>Calculate</h3><p>Late fee, interest and limitation calculations with the assumptions and statutory basis shown alongside the result.</p><span class="task-link">Open calculators →</span></a>
+      <a class="task-card" href="compliance.html#rates"><span class="task-no">03</span><h3>Check a provision</h3><p>Rates, ITC, reversals, RCM, e-Way Bill and other practical reference points, arranged by topic.</p><span class="task-link">Browse GST reference →</span></a>
+      <a class="task-card task-accent" href="app.html"><span class="task-no">04</span><h3>Analyse returns</h3><p>Merge downloaded GST data, compare returns, investigate discrepancies and prepare structured working papers.</p><span class="task-link">See the desktop tool →</span></a>
+    </div>
   </div>
 </section>
 
-<section id="articles">
-  <div class="wrap narrow">
-    <h2>Recent writing</h2>
+<section class="reference-band" id="reference">
+  <div class="wrap split-intro">
+    <div>
+      <span class="eyebrow dark">GST Reference</span>
+      <h2>A reference designed for actual GST work.</h2>
+      <p>Find the applicable rule, date or rate without having to move through a generic information portal. Major sections are dated, linked to their legal basis and separated where the law changed over time.</p>
+      <a class="text-link" href="compliance.html">Explore GST Reference →</a>
+    </div>
+    <div class="reference-list">
+      <a href="compliance.html#duedates"><strong>Due dates</strong><span>Ordinary return timelines and period-wise context</span></a>
+      <a href="compliance.html#history"><strong>Late fee &amp; interest</strong><span>Changes since 01.07.2017 and current position</span></a>
+      <a href="compliance.html#limitation"><strong>Limitation</strong><span>Sections 73, 74 and 74A, with notice and order dates</span></a>
+      <a href="compliance.html#itc"><strong>ITC</strong><span>Time limits, conditions and reversal references</span></a>
+      <a href="compliance.html#rates"><strong>GST rates</strong><span>Rate structure and the September 2025 changes</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="app-section" id="tool">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow dark">GST Pragyan Desktop</span>
+      <h2>From downloaded returns to a usable working file.</h2>
+      <p>The desktop application is built for the data that already exists on a taxpayer's or officer's computer. It does not need a portal login and does not send the loaded files to a server.</p>
+    </div>
+    <div class="workflow">
+      <div><b>01</b><strong>Import</strong><span>GSTR-1, 3B, 2A, 2B, 9, 9C, IFF and e-Way Bill files.</span></div>
+      <div><b>02</b><strong>Merge</strong><span>Bring periods and return types into a consistent working dataset.</span></div>
+      <div><b>03</b><strong>Analyse</strong><span>Run scrutiny parameters and return-to-return comparisons.</span></div>
+      <div><b>04</b><strong>Reconcile</strong><span>Match purchases and examine ITC and e-Way Bill patterns.</span></div>
+      <div><b>05</b><strong>Report</strong><span>Prepare working papers and an ASMT-10 reference draft for review.</span></div>
+    </div>
+    <div class="app-callout">
+      <div><strong>See the actual application</strong><span>The screenshot above is from the current Windows build, not a mock-up.</span></div>
+      <a class="btn btn-outline" href="app.html">Explore Desktop Tool</a>
+    </div>
+  </div>
+</section>
+
+<section class="audience-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow dark">Built for different kinds of GST work</span>
+      <h2>Who is GST Pragyan for?</h2>
+    </div>
+    <div class="audience">
+      <div class="aud a1"><span class="tag">01 · Tax professionals</span><h3>Reconcile and review</h3><p>Use the reference, calculators and desktop analysis to support return review and working papers.</p></div>
+      <div class="aud a2"><span class="tag">02 · Taxpayers</span><h3>Understand the numbers</h3><p>Check dates, rates, ITC, late fee and interest before discussing a discrepancy with your adviser.</p></div>
+      <div class="aud a3"><span class="tag">03 · GST officers</span><h3>Investigate discrepancies</h3><p>Use return-based checks to identify matters that require examination and supporting records.</p></div>
+      <div class="aud a4"><span class="tag">04 · Students &amp; researchers</span><h3>Learn from the working position</h3><p>Follow dated provisions, calculations and practical examples instead of isolated figures.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="writing-section" id="articles">
+  <div class="wrap">
+    <div class="section-head row-head"><div><span class="eyebrow dark">Recent writing</span><h2>What changed, and why it matters.</h2></div><a class="text-link" href="articles.html">View all articles →</a></div>
     <div class="latest" id="latest-articles"></div>
-    <p style="margin-top:22px"><a href="articles.html">All articles &rarr;</a></p>
+  </div>
+</section>
+
+<section class="about-strip" id="download">
+  <div class="wrap about-strip-inner">
+    <div><span class="eyebrow dark">About GST Pragyan</span><h2>An independent working tool, built around accuracy and traceability.</h2><p>Every important figure should have a reason behind it. Where the data cannot establish something, the tool should say so rather than guess.</p></div>
+    <div class="strip-actions"><a class="btn btn-primary" href="about.html">About Us</a><a class="btn btn-outline" href="contact.html">Contact Us</a></div>
   </div>
 </section>
 </main>
-
 <footer class="site">
   <div class="wrap">
-    <div class="cols">
-      <div>
-        <a class="brand" href="index.html">
-          <img src="assets/wordmark-light.png" alt="GST Pragyan" width="210" height="26" class="wm">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand footer-mark" href="index.html" aria-label="GST Pragyan home">
+          <img src="assets/mark.png" alt="" width="58" height="58">
+          <span><strong>GST Pragyan</strong><small>Practical GST reference and working tools</small></span>
         </a>
-        <p style="margin-top:14px;max-width:44ch">
-          A free GST reference and a desktop tool for reading returns, for taxpayers,
-          professionals, officers and students alike.
-        </p>
+        <p>A practical GST reference, calculators, articles and a Windows desktop application for working with downloaded GST data.</p>
       </div>
       <div>
-        <h4>Free reference</h4>
+        <h4>Reference</h4>
         <ul>
-          <li><a href="compliance.html#calc">Calculators</a></li>
           <li><a href="compliance.html#duedates">Due dates</a></li>
-          <li><a href="compliance.html#history">Rate history since 2017</a></li>
-          <li><a href="compliance.html#limitation">Notice &amp; order dates</a></li>
+          <li><a href="compliance.html#history">Late fee &amp; interest</a></li>
+          <li><a href="compliance.html#limitation">Limitation</a></li>
           <li><a href="compliance.html#itc">Input tax credit</a></li>
+          <li><a href="compliance.html#rates">GST rates</a></li>
         </ul>
       </div>
       <div>
-        <h4>More</h4>
+        <h4>Tools</h4>
         <ul>
-          <li><a href="app.html">The application</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          
-          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="calculators.html">GST calculators</a></li>
+          <li><a href="app.html">Desktop tool</a></li>
+          <li><a href="articles.html">Articles</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>GST Pragyan</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
           <li><a href="mailto:pragyan.gst@gmail.com">pragyan.gst@gmail.com</a></li>
         </ul>
       </div>
     </div>
-    <div class="rule">
-      <p>GST Pragyan is an independent working aid. It is not published by, endorsed by or
-      affiliated with the Central Board of Indirect Taxes and Customs, the GST Network or
-      any Government of India body. “GST”, “GSTN” and the names of the statutory forms are
-      used descriptively.</p>
-      <p style="margin:0">© 2026 GST Pragyan. For reference only, verify before you rely on it.</p>
+    <div class="footer-bottom">
+      <p>GST Pragyan is an independent GST working and reference tool. It is not an official government website or government-affiliated service.</p>
+      <p>For reference and working purposes only. Verify the applicable Act, rule, notification, circular and record before relying on a figure or conclusion.</p>
+      <p>© 2026 GST Pragyan.</p>
     </div>
   </div>
 </footer>
-
-
 <script>
-/* The three most recent articles, from the same manifest that drives articles.html, so publishing means editing one file, not two. Silent on failure: a home page that
-   loads is worth more than an error where a list would be. */
 (function () {
   var host = document.getElementById("latest-articles");
   if (!host || !window.fetch) return;
-  var M = ["January","February","March","April","May","June","July","August",
-           "September","October","November","December"];
-  function esc(s) {
-    return String(s).replace(/[&<>"]/g, function (c) {
-      return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c];
-    });
-  }
-  fetch("articles.json", { cache: "no-store" })
-    .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (d) {
-      var list = (d && d.articles) || [];
-      if (!list.length) { document.getElementById("articles").style.display = "none"; return; }
-      host.innerHTML = list.slice(0, 3).map(function (a) {
-        var p = String(a.date).split("-");
-        var when = p.length === 3
-          ? parseInt(p[2], 10) + " " + M[parseInt(p[1], 10) - 1] + " " + p[0] : a.date;
-        return '<article class="card art"><div class="art-meta">' + esc(when) + "</div>" +
-               '<h3><a href="articles/' + esc(a.slug) + '.html">' + esc(a.title) + "</a></h3>" +
-               "<p>" + esc(a.summary || "") + "</p></article>";
-      }).join("");
-    })
-    .catch(function () { document.getElementById("articles").style.display = "none"; });
+  var M = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" })[c]; }); }
+  fetch("articles.json", {cache:"no-store"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
+    var list=(d&&d.articles)||[];
+    if(!list.length){ host.innerHTML='<div class="empty-state">No articles have been published yet.</div>'; return; }
+    host.innerHTML=list.slice(0,3).map(function(a){
+      var p=String(a.date).split("-"), when=p.length===3 ? parseInt(p[2],10)+" "+M[parseInt(p[1],10)-1]+" "+p[0] : a.date;
+      return '<article class="card art"><div class="art-meta">'+esc(when)+'</div><h3><a href="articles/'+esc(a.slug)+'.html">'+esc(a.title)+'</a></h3><p>'+esc(a.summary||"")+'</p><span class="task-link">Read article →</span></article>';
+    }).join("");
+  }).catch(function(){ host.innerHTML='<div class="empty-state">Articles could not be loaded at the moment.</div>'; });
 })();
 </script>
 </body>
