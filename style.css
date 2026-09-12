@@ -1,4 +1,4 @@
-/* GST Pragyan — one stylesheet, no framework, no build step.
+/* GST Pragyan. One stylesheet, no framework, no build step.
    Palette taken from the logo: deep navy, teal, mint green, with orange as the single
    accent that appears in the wordmark's arrow. */
 
@@ -401,7 +401,7 @@ tbody tr.hi { background: #FFF8EC !important; }
 .prose h2 { margin-top: 34px; }
 
 /* ================================================================ 2026 redesign
-   The pages were carrying a lot of ornament — a mocked-up dashboard, decorative
+   The pages were carrying a lot of ornament: a mocked-up dashboard, decorative
    charts whose data meant nothing, a band of round-number statistics. On a
    reference people check figures against, ornament that looks like data is worse
    than no ornament: a reader cannot tell the illustrative line from the real
@@ -417,7 +417,7 @@ tbody tr.hi { background: #FFF8EC !important; }
 /* A sub-heading line under an h2. */
 .sub { color: var(--ink-soft); font-size: 1.03rem; max-width: 62ch; margin: -6px 0 26px; }
 
-/* The four questions. Two columns on a wide screen, one on a phone, no cards —
+/* The four questions. Two columns on a wide screen, one on a phone, no cards.
    a card around every paragraph is the thing that made the old page feel busy. */
 .qa { display: grid; gap: 26px 40px; grid-template-columns: 1fr 1fr; }
 .qa h3 { font-size: 1.06rem; margin: 0 0 6px; color: var(--navy-deep); }
@@ -443,3 +443,31 @@ ul.plain strong { color: var(--navy-deep); }
 /* Sections breathe more and repeat less. */
 section { padding: 56px 0; }
 section h2 { margin-top: 0; }
+
+/* ================================================================ plainer surface
+   The hero was a three-layer gradient with two radial glows behind it. It is a
+   reference site; the decoration was competing with the text and it made every page
+   open with a large coloured block that said nothing. One flat colour, less height,
+   and the words do the work. */
+.hero {
+  background: var(--navy-deep);
+  padding: 44px 0 40px;
+}
+.hero::before, .hero::after { display: none; }
+.hero h1 { max-width: 22ch; font-size: clamp(1.7rem, 3.4vw, 2.4rem); margin-bottom: 14px; }
+.hero .lede { font-size: 1.02rem; margin-bottom: 14px; }
+.hero .cta-row { margin-top: 22px; }
+
+/* The eyebrow was a coloured rule plus small caps above every heading. It labelled
+   pages whose heading already said the same word. */
+.hero .eyebrow { display: none; }
+
+/* Section rhythm: one quiet alternation instead of four background treatments. */
+section { padding: 48px 0; }
+.paper { background: var(--paper); }
+
+/* Headings sized for reading rather than for impact. */
+.prose h2, .wrap.narrow h2 { font-size: 1.35rem; margin-top: 34px; }
+.prose h3 { font-size: 1.02rem; margin-top: 22px; margin-bottom: 4px; color: var(--navy-deep); }
+.prose h3 + p { margin-top: 0; }
+.prose p { margin-bottom: 14px; }

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact | GST Pragyan</title>
-<meta name="description" content="One email address. Corrections, requests for the desktop tool, and what cannot be answered.">
+<meta name="description" content="One email address. Corrections, requests for the desktop application, and what cannot be answered by email.">
 <meta property="og:title" content="Contact | GST Pragyan">
 <meta property="og:description" content="Free GST charts and calculators, and a desktop tool that reconciles the returns and prepares an ASMT-10 reference.">
 <meta property="og:type" content="website">
@@ -27,8 +27,8 @@
     </a>
     <nav>
       <a href="compliance.html">Charts</a>
-      <a href="compliance.html#rates">Rates</a>
       <a href="compliance.html#calc">Calculators</a>
+      <a href="app.html">Application</a>
       <a href="articles.html">Articles</a>
       <a href="about.html">About</a>
       <a href="contact.html" aria-current="page">Contact</a>
@@ -39,9 +39,8 @@
 <main id="main">
 <div class="hero">
   <div class="wrap narrow">
-    <span class="eyebrow">Contact</span>
-    <h1>Get in touch</h1>
-    <p class="lede">One address, read by one person. No form, no ticket number.</p>
+    <h1>Contact</h1>
+    <p class="lede">One address. No form.</p>
   </div>
 </div>
 
@@ -49,37 +48,27 @@
   <div class="wrap narrow prose">
     <p class="big-link"><a href="mailto:pragyan.gst@gmail.com">pragyan.gst@gmail.com</a></p>
 
-    <h2>What is worth writing about</h2>
-
+    <h2>Worth writing about</h2>
     <p><strong>Something is wrong.</strong> A figure, a date, a citation, a broken link.
-    This is the most useful mail I get. If you can say which page and what you expected
-    instead, better still.</p>
+    Saying which page, and what you expected instead, helps most.</p>
+    <p><strong>You want the application.</strong> Ask, and the current build and release
+    notes will be sent. It is a Windows application and it is free.</p>
+    <p><strong>Something is missing.</strong> A chart that would help, a return the
+    application should read, a check that would be useful.</p>
+    <p><strong>You are stuck.</strong> Include the version number from the title bar, and
+    what you were doing when it went wrong.</p>
 
-    <p><strong>You want the desktop tool.</strong> Say so and I will send the current build
-    and the release notes. It is a Windows application and it is free.</p>
+    <h2>Not possible by email</h2>
+    <p>No advice can be given on your own case, a client's case, or a notice you have
+    received. A person who has not seen the record is the wrong person to ask. A
+    practitioner who can see the papers is the right one.</p>
+    <p>Please do not send returns, notices or anything carrying a GSTIN. There is no way to
+    hold other people's tax records safely. If a problem needs data to reproduce, remove
+    the identifiers first or describe the shape of it instead.</p>
 
-    <p><strong>Something is missing.</strong> A chart that would help, a return the tool
-    should read, a check that would be useful. No promises on timing, but it goes on the
-    list.</p>
-
-    <p><strong>You are stuck with the tool.</strong> Include the version number from the
-    title bar and, if you can, what you were doing when it went wrong.</p>
-
-    <h2>What I cannot help with</h2>
-
-    <p>I cannot advise on your own case, your client's case, or a notice you have received.
-    Not being coy — it would be improper, and a stranger who has not seen your record is
-    the wrong person to ask. A practitioner who can see the papers is the right one.</p>
-
-    <p>Please do not send returns, notices or anything with a GSTIN on it. I do not want
-    other people's tax records in my inbox, and I have no way to keep them safely. If a
-    problem needs data to reproduce, strip the identifiers first or describe the shape of
-    it instead.</p>
-
-    <h2>Reply times</h2>
-
-    <p>This is not anyone's job. I read everything and usually reply within a few days.
-    If something is broken and you are on a deadline, say so in the subject line.</p>
+    <h2>Replies</h2>
+    <p>Usually within a few days. If something is broken and you are on a deadline, say so
+    in the subject line.</p>
   </div>
 </section>
 </main>
@@ -92,7 +81,7 @@
           <img src="assets/wordmark-light.png" alt="GST Pragyan" width="210" height="26" class="wm">
         </a>
         <p style="margin-top:14px;max-width:44ch">
-          A free GST reference and a desktop tool for reading returns — for taxpayers,
+          A free GST reference and a desktop tool for reading returns, for taxpayers,
           professionals, officers and students alike.
         </p>
       </div>
@@ -109,10 +98,10 @@
       <div>
         <h4>More</h4>
         <ul>
-          <li><a href="index.html#tool">The desktop tool</a></li>
+          <li><a href="app.html">The application</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="index.html#download">Getting it</a></li>
+          
           <li><a href="privacy.html">Privacy policy</a></li>
           <li><a href="mailto:pragyan.gst@gmail.com">pragyan.gst@gmail.com</a></li>
         </ul>
@@ -123,11 +112,41 @@
       affiliated with the Central Board of Indirect Taxes and Customs, the GST Network or
       any Government of India body. “GST”, “GSTN” and the names of the statutory forms are
       used descriptively.</p>
-      <p style="margin:0">© 2026 GST Pragyan. For reference only — verify before you rely on it.</p>
+      <p style="margin:0">© 2026 GST Pragyan. For reference only, verify before you rely on it.</p>
     </div>
   </div>
 </footer>
 
 
+<script>
+/* The three most recent articles, from the same manifest that drives articles.html, so publishing means editing one file, not two. Silent on failure: a home page that
+   loads is worth more than an error where a list would be. */
+(function () {
+  var host = document.getElementById("latest-articles");
+  if (!host || !window.fetch) return;
+  var M = ["January","February","March","April","May","June","July","August",
+           "September","October","November","December"];
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c];
+    });
+  }
+  fetch("articles.json", { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      var list = (d && d.articles) || [];
+      if (!list.length) { document.getElementById("articles").style.display = "none"; return; }
+      host.innerHTML = list.slice(0, 3).map(function (a) {
+        var p = String(a.date).split("-");
+        var when = p.length === 3
+          ? parseInt(p[2], 10) + " " + M[parseInt(p[1], 10) - 1] + " " + p[0] : a.date;
+        return '<article class="card art"><div class="art-meta">' + esc(when) + "</div>" +
+               '<h3><a href="articles/' + esc(a.slug) + '.html">' + esc(a.title) + "</a></h3>" +
+               "<p>" + esc(a.summary || "") + "</p></article>";
+      }).join("");
+    })
+    .catch(function () { document.getElementById("articles").style.display = "none"; });
+})();
+</script>
 </body>
 </html>

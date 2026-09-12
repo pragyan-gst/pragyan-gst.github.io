@@ -1,15 +1,15 @@
-# GST Pragyan — website
+# GST Pragyan , website
 
 Static pages. No framework, no build step, no dependencies.
 
-    index.html        the four questions, latest articles, the tool, what it will not do
-    about.html        why the site exists and what it tries to get right
-    contact.html      one address, what is worth writing about, what cannot be answered
-    compliance.html   12 chart sections + 3 calculators — late fee and interest since
-                      01.07.2017, notice/order limitation dates, and the rate structure
+    index.html        four questions, the application, recent writing
+    compliance.html   12 chart sections and 3 calculators
+    app.html          the application: what it does, how it works, questions
     articles.html     the article index, built from articles.json
     articles/         one HTML file per article, plus _TEMPLATE.html
-    articles.json     the article manifest — the only file to edit when publishing
+    articles.json     the article manifest, the only file to edit when publishing
+    about.html        what this is and how it is built
+    contact.html      one address, and what cannot be answered by email
     privacy.html      privacy policy
     style.css         one stylesheet for all of them
     assets/           logo, wordmark and social preview (109 KB)
@@ -43,7 +43,7 @@ Two things worth knowing:
 
 - The lists are built by `fetch()`, which cannot read a `file://` URL. Opening
   `articles.html` by double-clicking shows an explanatory message instead of the list.
-  Serve over HTTP to preview — see below. On GitHub Pages it just works.
+  Serve over HTTP to preview , see below. On GitHub Pages it just works.
 - The article pages themselves are plain static HTML with no scripting, so they are
   indexed and readable regardless.
 
@@ -53,17 +53,17 @@ Two things worth knowing:
 
 ## Editing
 
-- **Email** — search for `pragyan.gst@gmail.com`; it appears on several pages.
-- **Navigation** — the `<nav>` block is the same on every page. Change one, change all.
-- **Download link** — `index.html`, the section with `id="download"`. Replace the two
+- **Email** , search for `pragyan.gst@gmail.com`; it appears on several pages.
+- **Navigation** , the `<nav>` block is the same on every page. Change one, change all.
+- **Download link** , `index.html`, the section with `id="download"`. Replace the two
   buttons with a real link when the app is published.
-- **Colours** — the `:root` block at the top of `style.css`.
-- **Statutory figures** — `compliance.html`. The hero carries a review date; change it
+- **Colours** , the `:root` block at the top of `style.css`.
+- **Statutory figures** , `compliance.html`. The hero carries a review date; change it
   whenever you check the figures, and change the "Last updated" line in `privacy.html`
   whenever that policy changes.
-- **Rates** — section 12 of `compliance.html`. It must agree with
+- **Rates** , section 12 of `compliance.html`. It must agree with
   `gstk/rate_registry.json` in the desktop tool; if you change one, change the other.
-- **Limitation dates** — the `YEARS` object in the script at the foot of
+- **Limitation dates** , the `YEARS` object in the script at the foot of
   `compliance.html` drives the third calculator. Each year has the annual return due date
   and the s.73 / s.74 notice and order dates. Add a year by copying an entry.
 
@@ -74,7 +74,7 @@ The charts are only as good as their last review. Two things change often:
 - **Due dates** are extended by notification, sometimes at a few days' notice.
 - **Limitation dates for FY 2018-19 and 2019-20** rest on Notification No. 56/2023-CT,
   which is under challenge in several High Courts. If it is struck down those two rows
-  change, and the page says so — keep that caveat until the position settles.
+  change, and the page says so , keep that caveat until the position settles.
 
 ## Logo assets
 
@@ -99,3 +99,12 @@ pixel makes them transparent and the mark falls apart on the navy hero.
 Custom domain: Settings → Pages → Custom domain, then at your registrar add a CNAME
 record pointing to `<username>.github.io`. Tick *Enforce HTTPS* once the certificate is
 issued.
+
+## House style
+
+- **No em-dashes.** They were removed from every page. A comma, a full stop or a pair of
+  brackets says the same thing and reads more plainly.
+- **No first-person claims about who writes it.** The site describes the reference and the
+  application, not the author. Keep it that way.
+- **Nothing decorative that looks like data.** An illustrative chart on a page people check
+  figures against cannot be told apart from a real one.

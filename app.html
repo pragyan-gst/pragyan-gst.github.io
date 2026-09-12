@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The application | GST Pragyan</title>
+<meta name="description" content="GST Pragyan desktop application: what it does, how it works, and answers to common questions. Reads GSTR-1, 3B, 2A, 2B, 9, 9C and e-Way Bill data and reconciles them.">
+<meta property="og:title" content="The application | GST Pragyan">
+<meta property="og:description" content="Free GST charts and calculators, and a desktop tool that reconciles the returns and prepares an ASMT-10 reference.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="theme-color" content="#0B2440">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="assets/mark-64.png">
+<link rel="apple-touch-icon" href="assets/mark.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="assets/wordmark.png" alt="GST Pragyan" width="215" height="27" class="wm">
+    </a>
+    <nav>
+      <a href="compliance.html">Charts</a>
+      <a href="compliance.html#calc">Calculators</a>
+      <a href="app.html" aria-current="page">Application</a>
+      <a href="articles.html">Articles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero">
+  <div class="wrap narrow">
+    <h1>The application</h1>
+    <p class="lede">A Windows desktop application that reads the returns downloaded from
+    the portal and reconciles them against each other. Free. Nothing is uploaded.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:pragyan.gst@gmail.com?subject=GST%20Pragyan%20-%20download">Ask for a copy</a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap narrow prose">
+    <h2>What it does</h2>
+
+    <h3>Merges the returns</h3>
+    <p>GSTR-1, GSTR-3B, GSTR-2A, GSTR-2B, GSTR-9, GSTR-9C, IFF and the e-Way Bill report,
+    for as many periods as you have, stacked into one workbook. Every original column is
+    kept.</p>
+
+    <h3>Runs the scrutiny checks</h3>
+    <p>Thirty-nine parameters, each on its own worksheet, with every column headed by the
+    source it reads. Each tax head is tested separately, so an excess in one head is never
+    cancelled by a shortfall in another.</p>
+
+    <h3>Matches the purchases</h3>
+    <p>GSTR-2B against a purchase register, invoice by invoice, with Rule 37 ageing on
+    invoices unpaid beyond a hundred and eighty days.</p>
+
+    <h3>Drafts an ASMT-10 reference</h3>
+    <p>A Word draft carrying the statutory paragraph, the amount head by head, and the
+    month-wise working. Findings are separated into what is quantified, what needs
+    verification first, and what is only information.</p>
+
+    <h3>Analyses e-Way Bills</h3>
+    <p>Inward and outward reports merged into one set of transactions and run through
+    automated checks for unusual movement patterns. These are indicators, not proof.</p>
+
+    <h3>Builds an audit pack</h3>
+    <p>Books against returns, with the electronic cash and credit ledgers where they are
+    available, and register templates to fill in.</p>
+
+    <h2>How it works</h2>
+
+    <h3>It reads what the portal gives you</h3>
+    <p>Excel, JSON and PDF downloads, as downloaded. ZIP files can be added without
+    unpacking them first. Columns are matched by their heading rather than their position,
+    so a change to the portal export cannot silently cause the wrong column to be read.</p>
+
+    <h3>Nothing leaves the computer</h3>
+    <p>There is no account, no sign-in and no upload. The returns loaded and the workbooks
+    written stay on the machine it runs on. See the
+    <a href="privacy.html">privacy policy</a>.</p>
+
+    <h3>Every figure is traceable</h3>
+    <p>Each worksheet states the source of each column and the provision the test rests on.
+    A figure in the draft notice can be followed back to the row it came from.</p>
+
+    <h3>The statutory position is dated</h3>
+    <p>Late fee, interest and time limits are applied as they stood for the tax period
+    being examined, not as they stand today. The notification behind each is recorded.</p>
+
+    <h2>What it will not do</h2>
+    <p><strong>It does not decide anything.</strong> Every figure is a starting point for
+    examination. Nothing produced should be issued without being checked against the
+    record.</p>
+    <p><strong>It cannot see what is not in the returns.</strong> Whether a supply is
+    correctly classified, whether credit was used for business, whether an e-Way Bill
+    represented a taxable supply: none of that is in the data. Where a question cannot be
+    answered from the returns, the output says so instead of guessing.</p>
+    <p><strong>It is not a substitute for the record.</strong> Books, invoices and ledgers
+    settle questions the returns cannot.</p>
+
+    <h2>Questions</h2>
+
+    <h3>What does it cost?</h3>
+    <p>Nothing. There is no paid version and no licence.</p>
+
+    <h3>What do I need to run it?</h3>
+    <p>A Windows computer. No internet connection is needed once it is installed, and none
+    is used for the work it does.</p>
+
+    <h3>Does my data go anywhere?</h3>
+    <p>No. It has no network features. Returns loaded and files written stay on the
+    machine.</p>
+
+    <h3>Which returns does it read?</h3>
+    <p>GSTR-1, GSTR-3B, GSTR-2A, GSTR-2B, GSTR-9, GSTR-9C, IFF and the e-Way Bill MIS
+    report. GSTR-3B, GSTR-9 and GSTR-9C are read from the PDF; the rest from Excel or
+    JSON.</p>
+
+    <h3>Does it read GSTR-1A?</h3>
+    <p>It is built to, but the portal presently offers GSTR-1A only as a summary PDF, which
+    carries table totals and no invoice rows. There is therefore nothing to add for it. A
+    GSTR-1A filed for a period is already reflected in that period's GSTR-3B.</p>
+
+    <h3>Can it handle more than one year?</h3>
+    <p>Yes. Several years can be loaded together, and the workbook carries each year
+    separately as well as a combined view. Years are never set off against one another.</p>
+
+    <h3>Can it handle more than one GSTIN?</h3>
+    <p>No. One registration per workbook. A second registration needs its own run.</p>
+
+    <h3>Is the draft notice ready to issue?</h3>
+    <p>No, and it is not meant to be. It is a reference draft. Every figure needs checking
+    against the record, and the internal page of officer notes has to be removed before
+    anything is issued.</p>
+
+    <h3>Something looks wrong. What should I do?</h3>
+    <p>Please report it, with the version number from the title bar.
+    <a href="contact.html">Contact</a>. Most of what has been fixed was found this way.</p>
+
+    <h3>How do I get it?</h3>
+    <p><a href="mailto:pragyan.gst@gmail.com?subject=GST%20Pragyan%20-%20download">Ask by
+    email</a> and the current build and release notes will be sent.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/wordmark-light.png" alt="GST Pragyan" width="210" height="26" class="wm">
+        </a>
+        <p style="margin-top:14px;max-width:44ch">
+          A free GST reference and a desktop tool for reading returns, for taxpayers,
+          professionals, officers and students alike.
+        </p>
+      </div>
+      <div>
+        <h4>Free reference</h4>
+        <ul>
+          <li><a href="compliance.html#calc">Calculators</a></li>
+          <li><a href="compliance.html#duedates">Due dates</a></li>
+          <li><a href="compliance.html#history">Rate history since 2017</a></li>
+          <li><a href="compliance.html#limitation">Notice &amp; order dates</a></li>
+          <li><a href="compliance.html#itc">Input tax credit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="app.html">The application</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="mailto:pragyan.gst@gmail.com">pragyan.gst@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rule">
+      <p>GST Pragyan is an independent working aid. It is not published by, endorsed by or
+      affiliated with the Central Board of Indirect Taxes and Customs, the GST Network or
+      any Government of India body. “GST”, “GSTN” and the names of the statutory forms are
+      used descriptively.</p>
+      <p style="margin:0">© 2026 GST Pragyan. For reference only, verify before you rely on it.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+/* The three most recent articles, from the same manifest that drives articles.html, so publishing means editing one file, not two. Silent on failure: a home page that
+   loads is worth more than an error where a list would be. */
+(function () {
+  var host = document.getElementById("latest-articles");
+  if (!host || !window.fetch) return;
+  var M = ["January","February","March","April","May","June","July","August",
+           "September","October","November","December"];
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c];
+    });
+  }
+  fetch("articles.json", { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      var list = (d && d.articles) || [];
+      if (!list.length) { document.getElementById("articles").style.display = "none"; return; }
+      host.innerHTML = list.slice(0, 3).map(function (a) {
+        var p = String(a.date).split("-");
+        var when = p.length === 3
+          ? parseInt(p[2], 10) + " " + M[parseInt(p[1], 10) - 1] + " " + p[0] : a.date;
+        return '<article class="card art"><div class="art-meta">' + esc(when) + "</div>" +
+               '<h3><a href="articles/' + esc(a.slug) + '.html">' + esc(a.title) + "</a></h3>" +
+               "<p>" + esc(a.summary || "") + "</p></article>";
+      }).join("");
+    })
+    .catch(function () { document.getElementById("articles").style.display = "none"; });
+})();
+</script>
+</body>
+</html>
