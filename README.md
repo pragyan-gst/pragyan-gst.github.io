@@ -2,8 +2,10 @@
 
 Static pages. No framework, no build step, no dependencies.
 
-    index.html        who it's for, what the charts cover, latest articles, the tool
+    index.html        home page, visual overview, latest articles and the desktop tool
     compliance.html   12 chart sections + 3 calculators — late fee and interest since
+    about.html        why GST Pragyan exists, design principles and who it is for
+    contact.html      contact details, corrections and feedback
                       01.07.2017, notice/order limitation dates, and the rate structure
     articles.html     the article index, built from articles.json
     articles/         one HTML file per article, plus _TEMPLATE.html
