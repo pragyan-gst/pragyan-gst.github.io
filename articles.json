@@ -1,25 +1,23 @@
 {
-  "_comment": [
-    "The list of published articles. This is the ONLY file to edit when you publish:",
-    "add one entry at the TOP and the index page, the homepage strip and the article",
-    "count all follow. Newest first.",
-    "",
-    "  slug     the file name inside articles/, without .html",
-    "  title    as it appears in the list and in the browser tab",
-    "  date     ISO, yyyy-mm-dd. Shown as 3 September 2026.",
-    "  summary  one or two sentences. This is what a reader decides on.",
-    "  tags     short labels, two or three at most",
-    "",
-    "Delete nothing to unpublish - move the entry to \"drafts\" below and the page stays",
-    "on the server but drops off every list."
-  ],
   "articles": [
     {
       "slug": "2026-09-03-rate-rationalisation",
       "title": "The September 2025 rate change, and the two dates that catch people out",
       "date": "2026-09-03",
-      "summary": "Twelve and twenty-eight per cent are gone and forty per cent is not a standard rate. Tobacco kept its old rate for four months longer, and a supply that straddles either change date is not settled by its invoice date.",
-      "tags": ["Rates", "Notifications"]
+      "reviewed": "2026-09-12",
+      "summary": "Twelve and twenty-eight per cent are gone, forty per cent is not a standard rate, tobacco kept its old rate for four months longer than everything else, and a supply that straddles either change date is not settled by its invoice date.",
+      "tags": [
+        "Rates",
+        "Time of Supply"
+      ],
+      "audience": [
+        "Tax Professionals",
+        "GST Officers"
+      ],
+      "legal_basis": "Recommendations of the 56th GST Council meeting, 3 September 2025; Central Tax (Rate) notifications issued in September 2025 and December 2025; Rule 31D of the CGST Rules; Section 14 of the CGST Act, 2017.",
+      "common_pitfall": "Do not treat 40% as the ordinary GST rate, or test a supply near a rate-change date by invoice date alone.",
+      "related_reference": "compliance.html#rates",
+      "related_calculator": "calculators.html"
     }
   ],
   "drafts": []

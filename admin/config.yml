@@ -1,0 +1,121 @@
+# GST Pragyan article editor
+#
+# The GitHub backend below requires authentication. Decap CMS documents two
+# common approaches: Netlify Git Gateway, or GitHub plus an OAuth proxy.
+# This site keeps GitHub Pages as the public host, so the GitHub backend is
+# prepared for an OAuth proxy rather than moving the public website to a CMS.
+backend:
+  name: github
+  repo: pragyan-gst/pragyan-gst.github.io
+  branch: main
+  base_url: https://YOUR-OAUTH-PROXY.example.com
+  auth_endpoint: auth
+  squash_merges: true
+
+site_url: https://pragyan-gst.github.io
+logo_url: /assets/mark.png
+publish_mode: editorial_workflow
+media_folder: assets/articles
+public_folder: /assets/articles
+
+collections:
+  - label: Articles
+    name: articles
+    folder: content/articles
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    format: frontmatter
+    editor:
+      preview: true
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        hint: Use a practical headline that explains what changed or what the reader will learn.
+        pattern: ['.{12,}', 'Use a descriptive title of at least 12 characters.']
+      - label: Publication date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+        date_format: DD MMMM YYYY
+        time_format: false
+      - label: Last reviewed
+        name: reviewed
+        widget: datetime
+        format: YYYY-MM-DD
+        date_format: DD MMMM YYYY
+        time_format: false
+        default: '{{now}}'
+        hint: The date on which the legal position in this article was last checked.
+      - label: Summary
+        name: summary
+        widget: text
+        hint: One or two sentences used on the Articles page and in search results.
+      - label: Topic
+        name: topic
+        widget: select
+        multiple: true
+        min: 1
+        max: 3
+        options:
+          - Rates
+          - Time of Supply
+          - Limitation
+          - Late Fee
+          - Interest
+          - ITC
+          - Reversal
+          - RCM
+          - e-Way Bill
+          - Returns
+          - Appeals
+          - Compliance
+          - Registration
+          - Assessment
+          - Audit
+          - Other
+      - label: Audience
+        name: audience
+        widget: select
+        multiple: true
+        options:
+          - Taxpayers
+          - Tax Professionals
+          - GST Officers
+          - Students & Researchers
+      - label: Legal basis
+        name: legal_basis
+        widget: text
+        hint: State the relevant Act section, rule, notification, circular or other authority.
+      - label: Common pitfall
+        name: common_pitfall
+        widget: text
+        required: false
+        hint: Optional short warning about the most likely mistake.
+      - label: Related reference
+        name: related_reference
+        widget: select
+        required: false
+        options:
+          - { label: GST Rates, value: compliance.html#rates }
+          - { label: Due Dates, value: compliance.html#duedates }
+          - { label: Late Fee, value: compliance.html#latefee }
+          - { label: Interest, value: compliance.html#interest }
+          - { label: Limitation, value: compliance.html#limitation }
+          - { label: ITC, value: compliance.html#itc }
+          - { label: Reversal, value: compliance.html#reversal }
+          - { label: Reverse Charge, value: compliance.html#rcm }
+          - { label: e-Way Bill, value: compliance.html#ewb }
+      - label: Related calculator
+        name: related_calculator
+        widget: select
+        required: false
+        options:
+          - { label: GST Calculators, value: calculators.html }
+          - { label: Late Fee & Interest, value: calculators.html#calc-late-interest }
+          - { label: ITC Interest, value: calculators.html#calc-itc-interest }
+          - { label: Limitation Calculator, value: calculators.html#calc-limitation }
+      - label: Body
+        name: body
+        widget: markdown
+        hint: Use headings, short paragraphs, tables, blockquotes and links. Cite every substantive figure.

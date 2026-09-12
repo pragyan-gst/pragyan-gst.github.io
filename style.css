@@ -246,3 +246,14 @@ a:focus-visible,.btn:focus-visible,button:focus-visible,input:focus-visible,sele
   .field input,.field select{font-size:1rem}
   .btn{font-size:.98rem}
 }
+
+/* CMS-generated article polish */
+.article-review{margin:0 0 28px;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:#F7FAF9;color:var(--ink-soft);font-size:.9rem}
+.article-topic-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.article-source{margin-top:52px;padding-top:28px;border-top:1px solid var(--line)}
+.article-source h2{font-size:1.55rem}
+.article-related{margin-top:24px;padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:#F7FAF9}
+.article-related .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip-link{display:inline-flex;align-items:center;padding:7px 11px;border-radius:999px;background:#EAF7F3;color:var(--teal-deep);font-weight:700;font-size:.78rem}
+.chip-link a{color:inherit;text-decoration:none}
+@media(max-width:760px){.article-review{font-size:.86rem}.article-source{margin-top:38px}.article-topic-row{gap:6px}}
