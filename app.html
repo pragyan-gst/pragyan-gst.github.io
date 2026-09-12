@@ -17,25 +17,14 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="site">
-  <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="GST Pragyan home">
-      <img src="assets/wordmark.png" alt="GST Pragyan" width="215" height="27" class="wm">
-    </a>
-    <nav class="desktop-nav" aria-label="Primary navigation"><a href="compliance.html">GST Reference</a><a href="calculators.html">Calculators</a><a href="app.html" aria-current="page">Desktop Tool</a><a href="articles.html">Articles</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav>
-    <details class="mobile-nav">
-      <summary aria-label="Open navigation">Menu</summary>
-      <nav aria-label="Mobile navigation"><a href="compliance.html">GST Reference</a><a href="calculators.html">Calculators</a><a href="app.html" aria-current="page">Desktop Tool</a><a href="articles.html">Articles</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav>
-    </details>
-  </div>
-</header>
+<header class="site"><div class="wrap nav"><a class="brand" href="index.html" aria-label="GST Pragyan home"><img src="assets/wordmark.png" alt="GST Pragyan" width="215" height="27" class="wm"></a><div class="nav-tools"><button class="search-trigger" type="button" data-search-open aria-label="Search GST Pragyan" title="Search GST Pragyan (Ctrl K)"><span class="search-icon">⌕</span><span class="search-trigger-label">Search</span><kbd>Ctrl K</kbd></button><nav class="desktop-nav" aria-label="Primary navigation"><a href="compliance.html">GST Reference</a><a href="calculators.html">Calculators</a><a href="app.html" aria-current="page">Desktop Tool</a><a href="articles.html">Articles</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav><details class="mobile-nav"><summary aria-label="Open navigation">Menu</summary><nav aria-label="Mobile navigation"><a href="search.html">Search</a><a href="compliance.html">GST Reference</a><a href="calculators.html">Calculators</a><a href="app.html" aria-current="page">Desktop Tool</a><a href="articles.html">Articles</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav></details></div></div></header>
 
 <main id="main">
 <div class="hero">
   <div class="wrap narrow">
     <h1>The application</h1>
     <p class="lede">A Windows desktop application that reads the returns downloaded from the portal and reconciles them against each other. It is designed for offline working, with the source files staying on the computer.</p>
-    <div class="cta-row" id="download">
+    <div class="review-line">Last website review: <strong>12 September 2026</strong></div><div class="cta-row" id="download">
       <a class="btn btn-primary" href="mailto:pragyan.gst@gmail.com?subject=GST%20Pragyan%20-%20download">Request the current build</a>
       <a class="btn btn-glass" href="#workflow">See how it works</a>
     </div>
@@ -76,14 +65,14 @@
 
 <section>
   <div class="wrap narrow prose">
-    <h2>What it does</h2>
+    <div class="app-proof-grid"><div class="card"><div class="eyebrow dark">What you can evaluate before requesting the build</div><h2>See the working, not just the brochure.</h2><p>Use the screenshot, workflow and output descriptions below to understand how the current build handles downloaded GST data.</p><div class="proof-list"><div><b>Input</b><span>Downloaded GST return and e-Way Bill files</span></div><div><b>Processing</b><span>Merge, reconcile and run return-based checks</span></div><div><b>Output</b><span>Consolidated data, working papers and reference drafts</span></div></div></div><div class="card"><div class="eyebrow dark">Request process</div><h3>Ask for the current build</h3><ol class="compact-steps"><li>Email the request to <a href="mailto:pragyan.gst@gmail.com">pragyan.gst@gmail.com</a>.</li><li>The current build and release notes are sent after the request is reviewed.</li><li>No taxpayer data is needed for a build request.</li></ol><a class="btn btn-primary" href="mailto:pragyan.gst@gmail.com?subject=GST%20Pragyan%20Desktop%20request">Request the build</a></div></div><h2 id="scrutiny">What it does</h2>
 
     <h3>Merges the returns</h3>
     <p>GSTR-1, GSTR-3B, GSTR-2A, GSTR-2B, GSTR-9, GSTR-9C, IFF and the e-Way Bill report,
     for as many periods as you have, stacked into one workbook. Every original column is
     kept.</p>
 
-    <h3>Runs the scrutiny checks</h3>
+    <h3>Runs the scrutiny checks</h3><p class="parameter-callout"><strong>39 scrutiny parameters.</strong> Each runs on its own worksheet, identifies its source data and keeps tax heads separate. The detailed names should be read from the current build because they can evolve with the application release.</p>
     <p>Thirty-nine parameters, each on its own worksheet, with every column headed by the
     source it reads. Each tax head is tested separately, so an excess in one head is never
     cancelled by a shortfall in another.</p>
@@ -104,6 +93,17 @@
     <h3>Builds an audit pack</h3>
     <p>Books against returns, with the electronic cash and credit ledgers where they are
     available, and register templates to fill in.</p>
+
+    <div class="output-preview card"><span class="eyebrow dark">Illustrative working-paper format</span><h2>What a useful output should tell you</h2><div class="output-grid"><div><b>Finding</b><span>ITC mismatch for Apr 2025</span></div><div><b>Source</b><span>GSTR-3B and GSTR-2B</span></div><div><b>Amount</b><span>₹1,24,800, tax head shown separately</span></div><div><b>Action</b><span>Verify invoices and reconciliation before conclusion</span></div></div><p class="small">This example is illustrative. It is not an extract from a taxpayer's data or a statutory conclusion.</p></div><h2>System requirements</h2>
+    <p>Windows desktop environment. The application is intended for local processing of downloaded GST files. Keep the source files on the working computer and use the current release notes supplied with the build.</p>
+
+    <h2>Common questions</h2>
+    <h3>Can I work with more than one financial year?</h3>
+    <p>Yes. The workflow is designed to combine available periods into one working dataset, subject to the supported file formats in the current build.</p>
+    <h3>Can I work with more than one GSTIN?</h3>
+    <p>Keep each taxpayer's files clearly separated unless the current build specifically supports the required multi-GSTIN workflow. Verify the selected GSTIN and legal name before processing.</p>
+    <h3>Does the website upload my return data?</h3>
+    <p>No website upload is required for the desktop workflow. The application is designed for local processing of imported files.</p>
 
     <h2>How it works</h2>
 
@@ -182,51 +182,7 @@
 </section>
 </main>
 
-<footer class="site">
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a class="brand footer-mark" href="index.html" aria-label="GST Pragyan home">
-          <img src="assets/mark.png" alt="" width="58" height="58">
-          <span><strong>GST Pragyan</strong><small>Practical GST reference and working tools</small></span>
-        </a>
-        <p>A practical GST reference, calculators, articles and a Windows desktop application for working with downloaded GST data.</p>
-      </div>
-      <div>
-        <h4>Reference</h4>
-        <ul>
-          <li><a href="compliance.html#duedates">Due dates</a></li>
-          <li><a href="compliance.html#history">Late fee &amp; interest</a></li>
-          <li><a href="compliance.html#limitation">Limitation</a></li>
-          <li><a href="compliance.html#itc">Input tax credit</a></li>
-          <li><a href="compliance.html#rates">GST rates</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Tools</h4>
-        <ul>
-          <li><a href="calculators.html">GST calculators</a></li>
-          <li><a href="app.html">Desktop tool</a></li>
-          <li><a href="articles.html">Articles</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>GST Pragyan</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
-          <li><a href="mailto:pragyan.gst@gmail.com">pragyan.gst@gmail.com</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>GST Pragyan is an independent GST working and reference tool. It is not an official government website or government-affiliated service.</p>
-      <p>For reference and working purposes only. Verify the applicable Act, rule, notification, circular and record before relying on a figure or conclusion.</p>
-      <p>© 2026 GST Pragyan.</p>
-    </div>
-  </div>
-</footer>
+<footer class="site"><div class="wrap"><div class="footer-privacy-strip"><strong>Privacy note:</strong> GST Pragyan does not require a website account. The desktop application processes imported files locally on the computer where it runs.</div><div class="footer-top"><div class="footer-brand"><a class="brand footer-mark" href="index.html" aria-label="GST Pragyan home"><img src="assets/mark.png" alt="" width="58" height="58"><span><strong>GST Pragyan</strong><small>Practical GST reference and working tools</small></span></a><p>A practical GST reference, calculators, articles and a Windows desktop application for working with downloaded GST data.</p><p class="footer-email"><a href="mailto:pragyan.gst@gmail.com">pragyan.gst@gmail.com</a> · <a href="contact.html">Report an error</a></p></div><div><h4>Reference</h4><ul><li><a href="compliance.html#duedates">Due dates</a></li><li><a href="compliance.html#history">Late fee &amp; interest</a></li><li><a href="compliance.html#limitation">Limitation</a></li><li><a href="compliance.html#itc">Input tax credit</a></li><li><a href="compliance.html#rates">GST rates</a></li><li><a href="quick-reference.html">Quick reference sheet</a></li></ul></div><div><h4>Tools</h4><ul><li><a href="calculators.html">GST calculators</a></li><li><a href="app.html">Desktop tool</a></li><li><a href="articles.html">Articles</a></li><li><a href="whats-new.html">What's New</a></li></ul></div><div><h4>GST Pragyan</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy</a></li></ul></div></div><div class="footer-bottom"><p>GST Pragyan is an independent GST working and reference tool. It is not an official government website or government-affiliated service.</p><p>For reference and working purposes only. Verify the applicable Act, rule, notification, circular and record before relying on a figure or conclusion.</p><p>© 2026 GST Pragyan.</p></div></div></footer>
 
 
 <script>
@@ -259,5 +215,6 @@
     .catch(function () { document.getElementById("articles").style.display = "none"; });
 })();
 </script>
+<script src="site.js" defer></script>
 </body>
 </html>

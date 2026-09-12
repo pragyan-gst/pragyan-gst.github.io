@@ -72,3 +72,9 @@ The site is suitable for GitHub Pages or any ordinary static host. Upload the co
 - Keep substantive GST figures dated and tied to the relevant legal provision.
 - Do not present illustrative graphics as statutory data.
 - Keep the distinction between a working aid and an official/legal conclusion clear.
+
+## Professional workflow upgrades
+
+Search, printable/filterable reference tables, calculator working-paper outputs, a dated What's New page, a printable GST quick reference sheet, audience pathways and the actual Desktop Tool screenshot are included.
+
+The site avoids em-dashes in visible copy. Use commas, full stops, parentheses or ordinary hyphens instead.
