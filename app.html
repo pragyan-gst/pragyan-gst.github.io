@@ -26,7 +26,7 @@
       <span class="eyebrow">Offline GST analysis</span>
       <h1>The application</h1>
       <p class="lede">A Windows desktop application that reads the returns downloaded from the portal and reconciles them against each other. It is designed for offline working, with the source files staying on the computer.</p>
-      <div class="review-line">Last website review: <strong>12 September 2026</strong></div><div class="cta-row" id="download">
+      <div class="review-line">Last website review: <strong>13 September 2026</strong></div><div class="cta-row" id="download">
         <a class="btn btn-primary" href="mailto:pragyan.gst@gmail.com?subject=GST%20Pragyan%20-%20download">Request the current build</a>
         <a class="btn btn-glass" href="#workflow">See how it works</a>
       </div>
@@ -84,8 +84,16 @@
 
     <h3>Runs the scrutiny checks</h3><p class="parameter-callout"><strong>39 scrutiny parameters.</strong> Each runs on its own worksheet, identifies its source data and keeps tax heads separate. The detailed names should be read from the current build because they can evolve with the application release.</p>
     <p>Thirty-nine parameters, each on its own worksheet, with every column headed by the
-    source it reads. Each tax head is tested separately, so an excess in one head is never
-    cancelled by a shortfall in another.</p>
+    source it reads.</p>
+    <p>The amount is measured tax head by tax head and financial year by financial year.
+    IGST, CGST and SGST are separate levies under separate Acts, so a shortfall in one head
+    is never cancelled by an excess in another. Financial years are added and never netted
+    against each other, because limitation under Sections 73 and 74 runs separately for
+    each year. Within a financial year the amount is taken on that year's own totals, so a
+    tax period of excess does set off a tax period of shortfall: the liability is a running
+    self-assessed account and an excess declared in one tax period is adjustable against a
+    shortfall in another. Each parameter worksheet also shows what the column would come to
+    without that set-off, so both figures are in front of you.</p>
 
     <h3>Matches the purchases</h3>
     <p>GSTR-2B against a purchase register, invoice by invoice, with Rule 37 ageing on
@@ -99,10 +107,19 @@
     <h3>Analyses e-Way Bills</h3>
     <p>Inward and outward reports merged into one set of transactions and run through
     automated checks for unusual movement patterns. These are indicators, not proof.</p>
+    <p>Where a check compares an implied tax rate against the notified slabs, it tests it
+    against the rates in force on the date of the document itself, not against a fixed
+    list. So 40% on a movement after 22 September 2025 is not reported as an anomaly, 28%
+    on tobacco inside the deferral window is not reported either, and 12% on a document
+    dated before the change is correct. Cess-bearing goods and consignments covering more
+    than one rate are left out of that test, because a single combined tax figure divided
+    by a value cannot produce a slab rate for them.</p>
 
     <h3>Builds an audit pack</h3>
     <p>Books against returns, with the electronic cash and credit ledgers where they are
-    available, and register templates to fill in.</p>
+    available, and register templates to fill in. This is a work mode of its own, sitting
+    alongside return reconciliation, scrutiny, purchase matching and e-Way Bill
+    investigation.</p>
 
     <div class="output-preview card"><span class="eyebrow dark">Illustrative working-paper format</span><h2>What a useful output should tell you</h2><div class="output-grid"><div><b>Finding</b><span>ITC mismatch for Apr 2025</span></div><div><b>Source</b><span>GSTR-3B and GSTR-2B</span></div><div><b>Amount</b><span>₹1,24,800, tax head shown separately</span></div><div><b>Action</b><span>Verify invoices and reconciliation before conclusion</span></div></div><p class="small">This example is illustrative. It is not an extract from a taxpayer's data or a statutory conclusion.</p></div><h2>System requirements</h2>
     <p>Windows desktop environment. The application is intended for local processing of downloaded GST files. Keep the source files on the working computer and use the current release notes supplied with the build.</p>
@@ -132,8 +149,11 @@
     A figure in the draft notice can be followed back to the row it came from.</p>
 
     <h3>The statutory position is dated</h3>
-    <p>Late fee, interest and time limits are applied as they stood for the tax period
-    being examined, not as they stand today. The notification behind each is recorded.</p>
+    <p>Late fee, interest, rates and time limits are applied as they stood for the tax
+    period being examined, not as they stand today. They are held in dated registries
+    inside the application, each entry carrying the notification it rests on and the dates
+    between which it applied, so the working paper can be read against the law of its own
+    period.</p>
 
     <h2>What it will not do</h2>
     <p><strong>It does not decide anything.</strong> Every figure is a starting point for
